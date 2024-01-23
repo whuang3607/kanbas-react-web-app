@@ -2,20 +2,26 @@
 <table>
     <tr>
         <td>Image: </td>
-        <td></td>
+        <td>
+            <button>Choose Image</button>
+        </td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td>Name: </td>
         <td>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td>Course Code: </td>
         <td>CS4550.12631.202410</td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td>Blueprint Course: </td>
         <td>No</td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td>Course Template: </td>
         <td>
@@ -23,6 +29,7 @@
             <label for="course-template">Enable course as a Course Template</label>
         </td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td>Time Zone: </td>
         <td>
@@ -34,18 +41,22 @@
             </select>
         </td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td>SIS ID: </td>
         <td>CS4550.12631.202410</td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td>Subaccount: </td>
         <td>CS Undergrad</td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td>Term: </td>
         <td>202410_1 Spring 2024 Semester Full Term</td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
         <td rowspan="6" valign="top">Participation: </td>
         <td>
@@ -86,12 +97,119 @@
             <label for="restrict-after-end">Restrict students from viewing course after term end date</label>
         </td>
     </tr>
+    <tr><td><br/></td></tr>
     <tr>
-        <td>Default due time: </td>
+        <td rowspan="2" valign="top">Default due time: </td>
         <td>
             <select>
-                
+                <option value="default">Account default (11:59pm)</option>
             </select>
         </td>
     </tr>
+    <tr>
+        <td>This influences the user interface for setting due dates. It does not change the time due for any existing assignments</td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td rowspan="2" valign="top">Language</td>
+        <td>
+            <select>
+                <option value="american-english">Not set(user-configuable, defaults to English (United States))</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>This will override any user/system language preferences. This is only recommended for foreign language courses</td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td>File Storage: </td>
+        <td>10000 megabytes</td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td>Large Course: </td>
+        <td>
+            <input type="checkbox" id="launch-speedgrader" name="launch-speedgrader" value="launch-speedgrader"/>
+            <label for="launch-speedgrader">Launch SpeedGrader Filtered by Student Group</label>
+        </td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td>Grading Scheme: </td>
+        <td>
+            <input type="checkbox" id="grading-scheme" name="grading-scheme" value="grading-scheme"/>
+            <label for="grading-scheme">Enable course grading scheme</label>
+        </td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td>License: </td>
+        <td>
+            <select>
+                <option value="private">Private (Copyrighted)</option>
+            </select>
+            <button>?</button>
+        </td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td>File Copyright: </td>
+        <td>
+            <input type="checkbox" id="file-copyright" name="file-copyright" value="file-copyright"/>
+            <label for="file-copyright">Copyright and license information must be provided for files before they are published.</label>
+        </td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td rowspan="3" valign="top">Visibility: </td>
+        <td>If you need to make your course public please contact your administrator/support.</td>
+    </tr>
+    <tr>
+        <td>
+            <select>
+                <option value="course">Course</option>
+            </select>
+            <button>?</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox" id="public-course-index" name="public-course-index" value="public-course-index"/>
+            <label for="public-course-index">Include this course in the public course index</label>
+        </td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td>Format: </td>
+        <td>
+            <select>
+                <option value="on-campus">On-Campus</option>
+                <option value="online">Online</option>
+            </select>
+        </td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td>Mastery Paths: </td>
+        <td>
+            <input type="checkbox" id="mastery-path" name="mastery-path" value="mastery-path"/>
+            <label for="mastery-path">Enable individual learning paths for students based on assessment</label>
+        </td>
+    </tr>
+    <tr><td><br/></td></tr>
+    <tr>
+        <td rowspan="2">Description: </td>
+        <td>
+            <textarea id="course-description" rows="4" cols="50"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="#">more options</a>
+        </td>
+    </tr>
 </table>
+<div align="right">
+    <a href="/Kanbas/Courses/Home/screen.html"><button type="button">Update Course Details</button></a>
+</div>
