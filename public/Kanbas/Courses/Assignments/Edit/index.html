@@ -4,84 +4,93 @@
     <option value="duplicate-assignment">Duplicate</option>
     <option value="delete-assignment">Delete</option>
     <option value="move-to-assignment">Move to...</option>
-    <option value="send-to-assignment">Send to...</option>
+    <option value="send-to-assignment">Send to...</op tion>
     <option value="copy-to-assignment">Copy to...</option>
     <option value="share-to-commons-assignment">Share to Commons</option>
 </select>
 <br/><br/>
 <table border="1" width="100%"></table>
-<label for="wd-assignment-name">Assignment</label><br/>
-<!--<h2>Assignment Name</h2>-->
+<h3>Assignment Name</h3>
 <input id="wd-assignment-name" value="A1 - ENV + HTML"/><br/>
 <br/>
 <textarea id="assignment-description" rows="4" cols="50">This is the assignment description.</textarea><br/>
 <br/>
-
-<!--Make a table for the Points, Assignment Group, Display Grade as, Submission Type, Online Entry Options-->
 <table>
     <tbody>
         <tr>
-            <td>Points</td>
-            <td></td>
-            <td></td>
+            <td>
+                <label for="points">Points</label>
+                <input id="points" type="number" min="0" max="100" value="100"/>
+                <br/><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="assignment_group">Assignment Group</label>
+                <select id="assignment_group">
+                    <option value="assignments">ASSIGNMENTS</option>
+                    <option value="quizzes">QUIZZES</option>
+                    <option value="exams">EXAMS</option>
+                    <option value="project">PROJECT</option>
+                </select>
+                <br/><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Display Grade as
+                <select>
+                    <option value="percentage">Percentage</option>
+                </select>
+                <br/><br/>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Submission Type
+            </td>
+            <td valign="top">
+                <select>
+                    <option value="online">Online</option>
+                </select>
+                <br/><br/>
+            </td>
         </tr>
         <tr>
             <td></td>
+            <td>
+                Online Entry Options
+            </td>
+        </tr>
+        <tr>
             <td></td>
+            <td>
+                <input type="checkbox" id="text-entry" name="text-entry" value="Text Entry"/>
+                <label for="text-entry">Text Entry</label>
+                <br/>
+                <input type="checkbox" id="website-url" name="website-url" value="Website URL">
+                <label for="website-url">Website URL</label>
+                <br/>
+                <input type="checkbox" id="media-recordings" name="media-recordings" value="Media Recordings">
+                <label for="media-recordings">Media Recordings</label>
+                <br/>
+                <input type="checkbox" id="student-annotation" name="student-annotation" value="Student Annotation">
+                <label for="student-annotation">Student Annotation</label>
+                <br/>
+                <input type="checkbox" id="file-uploads" name="file-uploads" value="File Uploads">
+                <label for="file-uploads">File Uploads</label><br/>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">Assign</td>
+            <td>Assign to</td>
+        </tr>
+        <tr>
             <td></td>
         </tr>
     </tbody>
 </table>
 
-Points
-<br/>
-<input type="number" min="0" max="100" value="100"/><br/>
-<br/>
-Assignment Group
-<br/>
-<select>
-    <option value="assignments">ASSIGNMENTS</option>
-</select>
-<br/><br/>
-Display Grade as
-<br/>
-<select>
-    <option value="percentage">Percentage</option>
-</select>
-<br/><br/>
-
-Submission Type <!--vertical align top-->
-<br/>
-<select>
-    <option value="online">Online</option>
-</select>
-<br/><br/>
-
-<!--In the same table as Submission Type-->
-Online Entry Options
-<br/>
-<input type="checkbox" id="text-entry" name="text-entry" value="Text Entry">
-<label for="text-entry">Text Entry</label>
-<br/>
-<input type="checkbox" id="website-url" name="website-url" value="Website URL">
-<label for="website-url">Website URL</label>
-<br/>
-<input type="checkbox" id="media-recordings" name="media-recordings" value="Media Recordings">
-<label for="media-recordings">Media Recordings</label>
-<br/>
-<input type="checkbox" id="student-annotation" name="student-annotation" value="Student Annotation">
-<label for="student-annotation">Student Annotation</label>
-<br/>
-<input type="checkbox" id="file-uploads" name="file-uploads" value="File Uploads">
-<label for="file-uploads">File Uploads</label><br/>
-<br/>
-
-
-<!--put this in 1 row in a table, multiple data points in table row-->
-Assign
-<br/>
-Assign to
-<br/>
 <input type="text" value="Everyone"/><br/>
 <br/>
 Due
