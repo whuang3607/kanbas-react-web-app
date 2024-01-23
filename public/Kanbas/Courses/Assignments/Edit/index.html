@@ -46,7 +46,7 @@
             </td>
         </tr>
         <tr>
-            <td valign="top">
+            <td valign="top" rowspan="3">
                 Submission Type
             </td>
             <td valign="top">
@@ -57,13 +57,11 @@
             </td>
         </tr>
         <tr>
-            <td></td>
             <td>
                 Online Entry Options
             </td>
         </tr>
         <tr>
-            <td></td>
             <td>
                 <input type="checkbox" id="text-entry" name="text-entry" value="Text Entry"/>
                 <label for="text-entry">Text Entry</label>
@@ -79,31 +77,55 @@
                 <br/>
                 <input type="checkbox" id="file-uploads" name="file-uploads" value="File Uploads">
                 <label for="file-uploads">File Uploads</label><br/>
+                <br/>
             </td>
         </tr>
         <tr>
-            <td valign="top">Assign</td>
+            <td valign="top" rowspan="8">Assign</td>
             <td>Assign to</td>
         </tr>
         <tr>
-            <td></td>
+            <td>
+                <input type="text" value="Everyone"/><br/>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>Due</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="date" value="2024-01-15"/><br/>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>Available from</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="date" value="2024-01-15"/><br/>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>Until</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="date" value="2024-01-15"/><br/>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="notify-users" name="notify-users" value="Notify Users"/>
+                <label for="notify-users">Notify users that this content has changed</label>
+            </td>
+            <td>
+                <button type="button"><a href="/Kanbas/Courses/Assignments/screen.html">Cancel</a></button>
+                <button type="button"><a href="/Kanbas/Courses/Assignments/screen.html">Save</a></button>
+            </td>
         </tr>
     </tbody>
 </table>
-
-<input type="text" value="Everyone"/><br/>
-<br/>
-Due
-<br/>
-<input type="date" value="2024-01-15"/><br/>
-<br/>
-Available from
-<br/>
-<input type="date" value="2024-01-15"/><br/>
-<br/>
-Until
-<br/>
-<input type="date" value="2024-01-15"/><br/>
-<br/>
-<button type="button">Cancel</button>
-<button type="button">Save</button>

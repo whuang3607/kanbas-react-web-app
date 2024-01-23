@@ -1,3 +1,176 @@
 <html>
-    
+    <body>
+        <table>
+            <tr>
+                <td valign="top">
+                    <ul>
+                        <li><a href="/Kanbas/Account/Navigation/index.html">Account</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Studio</a></li>
+                        <li><a href="#">Commons</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </td>
+                <td valign="top">
+                    <ul>
+                        <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
+                    </ul>
+                </td>
+                <td valign="top">
+                    <select>
+                        <option value="edit-assignment">Edit</option>
+                        <option value="speed-grader-assignment">Speed Grader</option>
+                        <option value="duplicate-assignment">Duplicate</option>
+                        <option value="delete-assignment">Delete</option>
+                        <option value="move-to-assignment">Move to...</option>
+                        <option value="send-to-assignment">Send to...</op tion>
+                        <option value="copy-to-assignment">Copy to...</option>
+                        <option value="share-to-commons-assignment">Share to Commons</option>
+                    </select>
+                    <br/><br/>
+                    <table border="1" width="100%"></table>
+                    <h3>Assignment Name</h3>
+                    <input id="wd-assignment-name" value="A1 - ENV + HTML"/><br/>
+                    <br/>
+                    <textarea id="assignment-description" rows="4" cols="50">This is the assignment description.</textarea><br/>
+                    <br/>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="points">Points</label>
+                                    <input id="points" type="number" min="0" max="100" value="100"/>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="assignment_group">Assignment Group</label>
+                                    <select id="assignment_group">
+                                        <option value="assignments">ASSIGNMENTS</option>
+                                        <option value="quizzes">QUIZZES</option>
+                                        <option value="exams">EXAMS</option>
+                                        <option value="project">PROJECT</option>
+                                    </select>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Display Grade as
+                                    <select>
+                                        <option value="percentage">Percentage</option>
+                                    </select>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" rowspan="3">
+                                    Submission Type
+                                </td>
+                                <td valign="top">
+                                    <select>
+                                        <option value="online">Online</option>
+                                    </select>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Online Entry Options
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="text-entry" name="text-entry" value="Text Entry"/>
+                                    <label for="text-entry">Text Entry</label>
+                                    <br/>
+                                    <input type="checkbox" id="website-url" name="website-url" value="Website URL">
+                                    <label for="website-url">Website URL</label>
+                                    <br/>
+                                    <input type="checkbox" id="media-recordings" name="media-recordings" value="Media Recordings">
+                                    <label for="media-recordings">Media Recordings</label>
+                                    <br/>
+                                    <input type="checkbox" id="student-annotation" name="student-annotation" value="Student Annotation">
+                                    <label for="student-annotation">Student Annotation</label>
+                                    <br/>
+                                    <input type="checkbox" id="file-uploads" name="file-uploads" value="File Uploads">
+                                    <label for="file-uploads">File Uploads</label><br/>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" rowspan="8">Assign</td>
+                                <td>Assign to</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" value="Everyone"/><br/>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Due</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" value="2024-01-15"/><br/>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Available from</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" value="2024-01-15"/><br/>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Until</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" value="2024-01-15"/><br/>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="notify-users" name="notify-users" value="Notify Users"/>
+                                    <label for="notify-users">Notify users that this content has changed</label>
+                                </td>
+                                <td>
+                                    <button type="button"><a href="/Kanbas/Courses/Assignments/screen.html">Cancel</a></button>
+                                    <button type="button"><a href="/Kanbas/Courses/Assignments/screen.html">Save</a></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                    
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>
