@@ -277,12 +277,59 @@
 
     <h2>Grid layout</h2>
     <div class="wd-grid-row">
+        <!-- this puts the left half of the screen as yellow div block -->
         <div class="wd-grid-col-half-page wd-bg-color-yellow">
             <h3>Left half</h3>
         </div>
+
+        <!-- this puts the right half of the screen as blue div block-->
         <div class="wd-grid-col-half-page wd-bg-color-blue wd-fg-color-white">
             <h3>Right half</h3>
         </div>
     </div>
+
+
+
+    <div class="wd-grid-row">
+        <!-- this makes the div object the left third of the screen -->
+        <div class="wd-grid-col-third-page wd-bg-color-green wd-fg-color-white">
+          <h3>Left third</h3>
+        </div>
+
+        <!-- this makes the div object the right 2/3 of the screen -->
+        <div class="wd-grid-col-two-thirds-page wd-bg-color-red wd-fg-color-white">
+            <h3>Right two thirds</h3>
+        </div>
+    </div>
+
+    <div class="wd-grid-row">
+        <!-- this makes the left sidebar -->
+        <div class="wd-grid-col-left-sidebar wd-bg-color-yellow">
+            <h3>Side bar</h3>
+            <p>This is the left sidebar</p>
+        </div>
+        
+        <!-- this makes the middle 60% main content div object -->
+        <div class="wd-grid-col-main-content wd-bg-color-blue wd-fg-color-white">
+            <h3>Main content</h3>
+            <p>This is the main content. This is the main content. This is the main content. </p>
+        </div>
+        
+        <!-- this makes the right sidebar -->
+        <div class="wd-grid-col-right-sidebar wd-bg-color-green wd-fg-color-white">
+            <h3>Side bar</h3>
+            <p>This is the right sidebar</p>
+        </div>
+    </div>
+
+
+
+    <h2>Flex</h2>
+    <div class="wd-flex-row-container">
+        <div class="wd-bg-color-yellow wd-width-85px">Column 1</div>
+        <div class="wd-bg-color-blue">Column 2</div>
+        <div class="wd-bg-color-red wd-flex-grow-1">Column 3</div>
+    </div>
+
   </body>
 </html>

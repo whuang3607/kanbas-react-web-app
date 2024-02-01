@@ -251,14 +251,64 @@ if I scroll content on page, element will not scroll with it
     clear: both;
 }
 
-/*  */
+/* this puts the div object into a row */
 .wd-grid-row {
     clear: both;
 }
  
-/*  */
+/* this makes the div object take half of the page */
 .wd-grid-col-half-page {
     width: 50%;
     float: left;
 }
+
+/* this makes the div object take the left 33% of the page */
+.wd-grid-col-third-page {
+    width: 33%;
+    float: left;
+}
  
+/* this makes the div object take the right 66% of the page */
+.wd-grid-col-two-thirds-page {
+    width: 67%;
+    float: left;
+}
+ 
+/* this makes a sidebar on the left side of the page */
+.wd-grid-col-left-sidebar {
+    width: 20%;
+    float: left;
+}
+ 
+/* this makes the div object the middle 60% of the page (where the main content goes) */
+.wd-grid-col-main-content {
+    width: 60%;
+    float: left;
+}
+ 
+/* this makes a sidebar on the right side of the page, width percentages should be 100% or else there could be wrapping of text */
+.wd-grid-col-right-sidebar {
+    width: 20%;
+    float: left;
+}
+
+/* 
+flex provides a simple way to layout and distribute content in HTML 
+create container element that controls the layout/behavior of its child elements
+this renders the div elements horizontally instead of vertically (simplifies laying out content horizontally)
+*/
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* this makes a column grow to fill in the empty space in the row */
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+/* this makes the column 85 pixels wide, the other pixels in the flex container adjust to this column */
+.wd-width-85px {
+    width: 85px;
+}
+  
