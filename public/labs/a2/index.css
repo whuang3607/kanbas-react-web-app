@@ -192,8 +192,73 @@ move contents 50 pixels from the botton (move up) and 50 pixels from the right (
     left: 20px;
 }
 
-/*  */
+/* just makes the position relative to its original position */
 .wd-pos-relative {
     position: relative;
+}
+
+/* Setting position property to absolute allows moving the element relative to the position of its parent */
+/* object moving 10 pixels down and right relative to its parent */
+.wd-pos-absolute-10-10 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* object moving 50 pixels down and right relative to its parent */
+.wd-pos-absolute-50-50 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+/* object moving 20 pixels down and 120 pixels right relative to its parent */
+.wd-pos-absolute-120-20 {
+    position: absolute;
+    top: 20px;
+    left: 120px;      
+}
+
+/* 
+setting position property to fixed allows setting the element relative to the window
+if I scroll content on page, element will not scroll with it
+*/
+.wd-pos-fixed {
+    position: fixed;
+    right: 0px;
+    bottom: 50%;
+}
+
+/* brings an object to the "front" of the screen cause it renders later */
+.wd-zindex-bring-to-front {
+    z-index: 10;
+}
+
+/* HTML does not support laying out content horizontally. The CSS float property allows fixing that. */
+/* making an object go the left of the screen */
+.wd-float-left {
+    float: left;
+}
+
+/* makes an object go to the right of the screen and makes the div box 100 pixels high */
+.wd-float-right {
+    float: right;
+    height: 100px;
+}
+
+/* clears the float format of a div object */
+.wd-float-done {
+    clear: both;
+}
+
+/*  */
+.wd-grid-row {
+    clear: both;
+}
+ 
+/*  */
+.wd-grid-col-half-page {
+    width: 50%;
+    float: left;
 }
  

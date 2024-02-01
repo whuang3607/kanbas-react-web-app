@@ -197,6 +197,81 @@
     </div>
 
 
-    
+
+    <h3>Absolute position</h3>
+    <div class="wd-pos-relative">
+        <!-- moving vertical box relative to its parent -->
+        <div class="wd-pos-absolute-10-10 wd-bg-color-yellow wd-dimension-portrait">
+            Portrait
+        </div>
+        
+        <!-- moving horizontal box relative to its parent -->
+        <div class="wd-pos-absolute-50-50 wd-bg-color-blue wd-fg-color-white wd-dimension-landscape">
+            Landscape   
+        </div>
+        
+        <!-- moving square box relative to its parent -->
+        <div class="wd-pos-absolute-120-20 wd-bg-color-red wd-dimension-square">
+            Square      
+        </div>
+    </div><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+    <h3>Fixed position</h3>
+    <!-- square is fixed relative to window (scrolling doesn't affect position)-->
+    Checkout the blue square that says "Fixed position" stuck all the way on the right and half way down the page. It doesn't scroll with the rest of the page. Its position is "Fixed".
+    <div class="wd-pos-fixed wd-dimension-square wd-bg-color-blue wd-fg-color-white">
+        Fixed position
+    </div>
+
+
+    <!--
+        The z-index CSS property overrides this behavior. 
+        Default value of z-index is auto, which corresponds to 0. 
+        Increasing z-index can make elements render later, or on top of, others.
+    -->
+    <h2>Z index</h2>
+    <div class="wd-pos-relative">
+    <div class="wd-pos-absolute-10-10 
+            wd-bg-color-yellow 
+            wd-dimension-portrait">
+            Portrait</div>
+    <div class="wd-zindex-bring-to-front 
+            wd-pos-absolute-50-50 
+            wd-bg-color-blue wd-fg-color-white 
+            wd-dimension-landscape">
+            Landscape</div>
+    <div class="wd-pos-absolute-120-20 
+            wd-bg-color-red wd-dimension-square">
+            Square</div>
+    </div><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+    <h2>Float</h2>
+    <div>
+        <!-- yellow box goes to the left side of the screen first -->
+        <div class="wd-float-left wd-dimension-portrait wd-bg-color-yellow">
+            Yellow
+        </div>
+
+        <!-- blue box goes to the left of the yellow box cause it rendered second -->
+        <div class="wd-float-left wd-dimension-portrait wd-bg-color-blue wd-fg-color-white">
+            Blue
+        </div>
+        
+        <!-- red box goes to the left of the yellow box cause it rendered third -->
+        <div class="wd-float-left wd-dimension-portrait wd-bg-color-red">
+            Red
+        </div>
+        
+        <!-- image goes to the right side of the screen -->
+        <img class="wd-float-right" src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"/>
+        
+        <!-- resets the div after placing all of the images to prevent other text from squeezing in the gap between the picture and boxes-->
+        <div class="wd-float-done"></div>
+    </div>
+
   </body>
 </html>
