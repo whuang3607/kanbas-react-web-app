@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet"/>
     <!--
     <style>
         p {
@@ -326,10 +327,162 @@
 
     <h2>Flex</h2>
     <div class="wd-flex-row-container">
+        <!-- this makes the yellow div object 85 pixels wide -->
         <div class="wd-bg-color-yellow wd-width-85px">Column 1</div>
         <div class="wd-bg-color-blue">Column 2</div>
+
+        <!-- this makes the red div object grow to the right side of the screen -->
         <div class="wd-bg-color-red wd-flex-grow-1">Column 3</div>
     </div>
+
+
+
+    <!-- bootstrap container -->
+    <div class="container">
+        <h1>Bootstrap</h1>
+        <p>Welcome to Bootstrap!</p>
+        <!-- main content goes here -->
+    </div>
+    
+
+    <!-- 
+        grid system using bootstrap, this is built in the bootstrap css doc
+        no need to write all of the classes on index.css file
+    -->
+    <h2>
+        <a href="https://getbootstrap.com/docs/5.1/layout/grid/">Grid system</a>
+    </h2>
+
+    <!-- this is a row -->
+    <div class="row">
+        <!-- makes a column in the left half of the screen -->
+        <div class="col bg-danger text-white">
+            <h3>Left half</h3>
+        </div>
+        
+        <!-- makes a column in the right half of the screen -->
+        <div class="col bg-primary text-white">
+            <h3>Right half</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- makes a column in left 1/3 of the screen -->
+        <div class="col-4 bg-warning">
+            <h3>One thirds</h3>
+        </div>
+
+        <!-- makes a column in the right 2/3 of the screen -->
+        <div class="col-8 bg-success text-white">
+            <h3>Two thirds</h3>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!-- left sidebar -->
+        <div class="col-2 bg-dark text-white">
+            <h3>Sidebar</h3>
+        </div>
+        
+        <!-- middle main content -->
+        <div class="col-8 bg-secondary text-white">
+            <h3>Main content</h3>
+        </div>
+        
+        <!-- right sidebar -->
+        <div class="col-2 bg-info">
+            <h3>Sidebar</h3>
+        </div>
+    </div>
+    
+
+    <!-- 
+        Bootstrap can make grids adapt to the size of the screen (responsive)
+        multiple col = different col size for different screen sizes 
+    -->
+    <h2>Responsive grid system</h2>
+    <div class="row">
+        <!-- col-12 = normally size 12, col-md-6 = medium size screen size 6 (smaller number = larger text), col-xl-3 = extra large screen size 3 -->
+        <div class="col-12 col-md-6 col-xl-3 bg-warning">
+            <h3>Column A</h3>
+        </div>
+        
+        <div class="col-12 col-md-6 col-xl-3 bg-primary text-white">
+            <h3>Column B</h3>
+        </div>
+    
+        <div class="col-12 col-md-6 col-xl-3 bg-danger text-white">
+            <h3>Column C</h3>
+        </div>
+    
+        <div class="col-12 col-md-6 col-xl-3 bg-success text-white">
+            <h3>Column D</h3>
+        </div>
+    </div>
+
+    <!-- Bootstrap breaks up the screen into 5 sizes: extra small, small, medium, large, extra large, and extra extra large -->
+    <h2>Responsive grid system part 2</h2>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-warning">
+            <h4>1</h4>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-primary text-white">
+            <h4>2</h4>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-danger text-white">
+            <h4>3</h4>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-success text-white">
+            <h4>4</h4>
+        </div>
+    
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-warning">
+            <h4>5</h4>
+        </div>
+    
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-primary text-white">
+            <h4>6</h4>
+        </div>
+    
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-danger text-white">
+            <h4>7</h4>
+        </div>
+    
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-success text-white">
+            <h4>8</h4>
+        </div>
+    
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-warning">
+            <h4>9</h4>
+        </div>
+   
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-primary text-white">
+            <h4>10</h4>
+        </div>
+    
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-danger text-white">
+            <h4>11</h4>
+        </div>
+    
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-success text-white">
+            <h4>12</h4>
+        </div>
+    </div>
+
+
+
+    <h2>Hiding and showing responsive content as I resize the screen</h2>
+    <!-- d-none/d-md-none/d-lg-none = doesn't show up -->
+    <div class="d-block d-sm-none fa-2x">XS</div>
+    <div class="d-none d-sm-block d-md-none fa-2x">S</div>
+    <div class="d-none d-md-block d-lg-none fa-2x">M</div>
+    <div class="d-none d-lg-block d-xl-none fa-2x">L</div>
+    <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
+    <div class="d-none d-xxl-block fa-2x">XXL</div>
 
   </body>
 </html>
