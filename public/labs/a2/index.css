@@ -1,0 +1,58 @@
+/*
+p {
+    background-color: blue;
+    color: white;
+}
+*/
+p#id-selector-1 {
+    background-color: red;
+    color: white;
+}
+p#id-selector-2 {
+    background-color: yellow;
+    color: black;
+}
+
+.wd-class-selector {
+    background-color: yellow;
+    color: blue;
+}
+   
+/* refers to .wd-selector-3 as a descendant of .wd-selector-1 */
+.wd-selector-1 .wd-selector-3 {
+    background-color: red;
+    color: white;
+}
+
+/* refers to .wd-selector-4 as a direct child of .wd-selector-3 which is a direct child of .wd-selector-2 */
+.wd-selector-2 > .wd-selector-3 > .wd-selector-4 {
+    background-color: yellow;
+    color: blue;
+}
+
+/*
+Colors can be strings (red, white, blue), hexadecimal (#ABCDEF, #012345), RGB (rgb(12, 34, 56))
+styling foreground color
+*/
+.wd-fg-color-black { color: black; }
+.wd-fg-color-white { color: white; }
+.wd-fg-color-blue { color: #7070ff; }
+.wd-fg-color-red { color: #ff7070; }
+.wd-fg-color-green { color: green; }
+
+/*
+styling background color
+*/
+.wd-bg-color-yellow {
+    background-color: #ffff07;
+}
+.wd-bg-color-blue {
+    background-color: #7070ff;
+}
+.wd-bg-color-red {
+    background-color: #ff7070;
+}
+.wd-bg-color-green {
+    background-color: green;
+}
+ 
