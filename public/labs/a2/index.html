@@ -19,15 +19,21 @@
         Style attribute allows configuring look and feel right on the element. Although it's very convenient it is considered bad practice and you should avoid using the style attribute
     </p>
     
+
+    
     <h3>Style tag</h3>
     <p>
         A slightly better way to configure look and feel is to declare CSS rules in the STYLE tag in the header and then refer to the tag by their name,  ID, or class This paragraph's style is set by a rule referring to the P tags
     </p>
     
+
+
     <h3>Link tag</h3>
     <p>
         The best way to apply CSS rules is to declare them in a separate CSS file and load it with the LINK tag. Always use this method.
     </p>
+
+
 
     <h3>ID selectors</h3>
     <p id="id-selector-1">
@@ -36,6 +42,8 @@
     <p id="id-selector-2">
         Here's another paragraph using a different ID and a different look and feel
     </p>
+
+
 
     <h3>Class selectors</h3>
     <p class="wd-class-selector">
@@ -65,6 +73,8 @@
         </div>
     </div>
     
+
+
     <h2>Colors</h2>
     <h3 class="wd-fg-color-blue">Foreground color</h3>
     <p class="wd-fg-color-red">
@@ -78,5 +88,115 @@
         <span class="wd-bg-color-green wd-fg-color-white"> the background of this text is green and the foreground white</span>
     </p>
 
+
+
+    <h2>Borders</h2>
+    <!--can combine multiple classes together to make combined effect-->
+    <p class="wd-border-fat wd-border-red wd-border-solid">
+        Solid fat red border
+    </p>
+    <p class="wd-border-thin wd-border-blue wd-border-dashed">
+        Dashed thin blue border
+    </p>
+
+    <h2>Padding</h2>
+    <!-- move content down and right -->
+    <div class="wd-padded-top-left wd-border-fat wd-border-red wd-border-solid wd-bg-color-yellow">
+        Padded top left
+    </div>
+
+    <!-- move content up and left -->
+    <div class="wd-padded-bottom-right wd-border-fat wd-border-blue wd-border-solid wd-bg-color-yellow">
+        Padded bottom right
+    </div>
+    
+    <!-- make padding bigger all around -->
+    <div class="wd-padding-fat wd-border-fat wd-border-yellow wd-border-solid wd-bg-color-blue wd-fg-color-white">
+        Padded all around
+    </div>
+
+
+
+    <h2>Margins</h2>
+    <!-- make margin bigger on bottom -->
+    <div class="wd-margin-bottom wd-padded-top-left wd-border-fat border-red wd-border-solid wd-bg-color-yellow">
+        Margin bottom
+    </div>
+    
+    <!-- make margin bigger on left and right -->
+    <div class="wd-margin-right-left wd-padded-bottom-right wd-border-fat border-blue wd-border-solid wd-bg-color-yellow">
+        Margin left right
+    </div>
+    
+    <!-- make margin bigger all around -->
+    <div class="wd-margin-all-around wd-padding-fat border-fat wd-border-yellow wd-border-solid wd-bg-color-blue wd-fg-color-white">
+        Margin all around
+    </div>
+
+
+
+    <h3>Rounded corners</h3>
+    <p class="wd-rounded-corners-top wd-border-thin wd-border-blue wd-border-solid wd-padding-fat">
+        Rounded corners on the top
+    </p>
+    
+    <p class="wd-rounded-corners-bottom wd-border-thin wd-border-blue wd-border-solid wd-padding-fat">
+        Rounded corners at the bottom
+    </p>
+
+    <p class="wd-rounded-corners-all-around wd-border-thin wd-border-blue wd-border-solid wd-padding-fat">
+        Rounded corners all around
+    </p>
+
+    <!-- each corner is rounded independently -->
+    <p class="wd-rounded-corners-inline wd-border-thin wd-border-blue wd-border-solid wd-padding-fat">
+        Different rounded corners
+    </p>
+
+
+
+    <h2>Dimension</h2>
+    <div>
+        <!-- creating a vertical box -->
+        <div class="wd-dimension-portrait wd-bg-color-yellow">
+            Portrait
+        </div>
+
+        <!-- creating a horizontal box -->
+        <div class="wd-dimension-landscape wd-bg-color-blue wd-fg-color-white">
+            Landscape
+        </div>
+
+        <!-- creating a square box -->
+        <div class="wd-dimension-square wd-bg-color-red">
+            Square
+        </div>
+    </div>
+
+
+
+    <h2>Position</h2>
+    <h3>Relative</h3>
+    <div>
+        <!-- moving vertical box down and right from its original position -->
+        <div class="wd-bg-color-yellow wd-dimension-portrait">
+            <div class="wd-pos-relative-nudge-down-right">
+                Portrait
+            </div>
+        </div>
+        
+        <!-- moving horizontal box up and right from its original position -->
+        <div class="wd-pos-relative-nudge-up-right wd-bg-color-blue wd-fg-color-white wd-dimension-landscape">
+            Landscape
+        </div>
+        
+        <!-- square box still stays the same -->
+        <div class="wd-bg-color-red wd-dimension-square">
+            Square
+        </div>
+    </div>
+
+
+    
   </body>
 </html>

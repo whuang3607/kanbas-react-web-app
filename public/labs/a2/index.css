@@ -4,15 +4,19 @@ p {
     color: white;
 }
 */
+
+/* selecting specific paragraph with id of id-selector-1 */
 p#id-selector-1 {
     background-color: red;
     color: white;
 }
+/* selecting specific paragraph with id of id-selector-2 */
 p#id-selector-2 {
     background-color: yellow;
     color: black;
 }
 
+/* selecting anything with id of .wd-class-selector (CSS class) */
 .wd-class-selector {
     background-color: yellow;
     color: blue;
@@ -54,5 +58,142 @@ styling background color
 }
 .wd-bg-color-green {
     background-color: green;
+}
+
+/* Creating fat border */
+.wd-border-fat {
+    border-width: 20px 30px 20px 30px; 
+}
+
+/* Creating thin border */
+.wd-border-thin {
+    border-width: 4px; 
+}
+
+/* Creating solid border */
+.wd-border-solid {
+    border-style: solid; 
+}
+
+/* Creating dashed border */
+.wd-border-dashed {
+    border-style: dashed; 
+}
+
+/* Creating yellow border */
+.wd-border-yellow {
+    border-color: #ffff07; 
+}
+
+/* Creating red border */
+.wd-border-red {
+    border-color: #ff7070; 
+}
+
+/* Creating blue border */
+.wd-border-blue {
+    border-color: #7070ff; 
+}
+
+/*
+CSS box model: (outside) margin --> border --> padding --> content (inside)
+*/
+/* 
+make padding 50 pixels bigger on top and 50 pixels bigger on left
+move content 50 pixels from the top (move down) and 50 pixels from the left (move right) using padding 
+*/
+.wd-padded-top-left {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+/* 
+make padding 50 pixels bigger on bottom and 50 pixels bigger on right
+move contents 50 pixels from the botton (move up) and 50 pixels from the right (move left) using padding 
+*/
+.wd-padded-bottom-right {
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+
+/* move contents 50 pixels in all directions (make padding 50 pixels larger all around) */
+.wd-padding-fat {
+    padding: 50px;
+}
+
+/* make margin 50 pixels bigger on bottom */
+.wd-margin-bottom {
+    margin-bottom: 50px;
+}
+
+/* make margin 50 pixels bigger on left and 50 pixels bigger on right */
+.wd-margin-right-left {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* make margin 50 pixels bigger on all sides (left, right, top, down) */
+.wd-margin-all-around {
+    margin: 30px;
+}
+
+/* round top corners of a div element */
+.wd-rounded-corners-top {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+/* round bottom corners of a div element */
+.wd-rounded-corners-bottom {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+/* round all corners of a div element */
+.wd-rounded-corners-all-around {
+    border-radius: 50px;
+}
+
+/* round each corner independently in a div element */
+.wd-rounded-corners-inline {
+    border-radius: 30px 0px 20px 50px;
+}
+
+/* Create a vertical div box */
+.wd-dimension-portrait {
+    width: 75px;
+    height: 100px;
+}
+
+/* Create a horizontal div box */
+.wd-dimension-landscape {
+    width: 100px;
+    height: 75px;
+}
+
+/* Create a square div box */
+.wd-dimension-square {
+    width: 75px;
+    height: 75px;
+}
+
+/* Setting position property to relative allows moving the element relative to its original position */
+/* moving the object up and right relative to its original position */
+.wd-pos-relative-nudge-up-right {
+    position: relative;
+    bottom: 30px; /* move 30 pixels from the bottom (move up) */
+    left: 30px; /* move 30 pixels from the left (move right) */
+}
+
+/* moving the object down and right relative to its original position */
+.wd-pos-relative-nudge-down-right {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+/*  */
+.wd-pos-relative {
+    position: relative;
 }
  
