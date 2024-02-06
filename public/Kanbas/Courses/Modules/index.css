@@ -1,4 +1,5 @@
-.wd-modules,.wd-modules * {
+.wd-modules,
+.wd-modules * {
   border-radius: 0%;
   border: none;
   margin: 0px;
@@ -28,4 +29,10 @@
 
 .wd-modules > li {
   margin-bottom: 20px;
+}
+
+.wd-modules-top-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
