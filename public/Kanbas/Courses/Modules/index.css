@@ -31,8 +31,14 @@
   margin-bottom: 20px;
 }
 
+.wd-modules-top-bar {
+  display: flex;
+  flex-direction: row;
+}
+
 .wd-modules-top-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: right;
 }
+
