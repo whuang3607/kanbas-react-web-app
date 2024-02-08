@@ -10,7 +10,7 @@
     border-color: black;
 }
 
-.table.table-bordered > tbody > tr > .grade-input > .form-control.w-50 {
+.table.table-bordered > tbody > tr > .grade-input > .input-group > .form-control.w-50 {
     text-align: center;
 }
 
