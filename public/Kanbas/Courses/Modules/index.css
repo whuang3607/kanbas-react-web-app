@@ -36,8 +36,3 @@
   flex-direction: row;
 }
 
-.wd-modules-top-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-}

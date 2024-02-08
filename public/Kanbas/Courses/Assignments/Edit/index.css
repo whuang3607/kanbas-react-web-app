@@ -1,0 +1,51 @@
+form {
+    text-align: center;
+} 
+
+form > .form-group.row > .col-sm-10.border.border-black.rounded.w-50 > .row.assign-format {
+    padding-left: 10px;
+    padding-top: 10px;
+    size: 20px;
+    font-weight: bold;
+}
+
+form > .form-group.row > .col-sm-10.border.border-black.rounded.w-50 > .border.border-black.rounded {
+    padding: 10px;
+}
+
+form > .form-group.row > .col-sm-10.border.border-black.rounded.w-50 > .border.border-black.rounded > .border.border-black.rounded.light-gray.w-50 {
+    background-color: lightgray;
+}
+
+form > .form-group.row > .col-sm-10.border.border-black.rounded.w-50 > .row.due-format {
+    padding-left: 10px;
+    padding-top: 10px;
+    size: 10px;
+    font-weight: bold;
+}
+
+form > .form-group.row > .col-sm-10.border.border-black.rounded.w-50 > .row.due-format > .col {
+    padding-left: 10px;
+    padding-top: 10px;
+    size: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+form > .form-group.row > .col-sm-10.border.border-black.rounded.w-50 > .row {
+    padding-bottom: 20px;
+    size: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+form > .row > .col-sm-10.border.border-black.rounded.w-50.add-button {
+    size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.row > .col > a {
+    text-decoration: none;
+}

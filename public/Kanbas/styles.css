@@ -20,3 +20,9 @@ nav > ol > li > .wd-second-link {
     font-size: 20px; 
     padding-top: 10px;
 }
+
+.wd-modules-top-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
