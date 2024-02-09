@@ -28,3 +28,30 @@
     color: red;
     text-decoration: none;
 }
+
+.wd-right-side-bar-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    width: 300px;
+    margin: 0px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.wd-right-side-bar-navigation li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wd-right-side-bar-navigation a {
+    color: red;
+    text-decoration: none;
+}
+
+.wd-right-side-bar-navigation li i {
+    color: red;
+}

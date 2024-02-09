@@ -32,3 +32,30 @@
     font-size: 2em;
     margin-bottom: 5px;
 }
+
+.wd-left-side-bar-navigation {
+    list-style: none;
+    padding: 0px;  
+    margin: 0px;
+    width: 85px;
+    height: 100%;
+}
+
+.wd-left-side-bar-navigation li {
+    padding: 10px;     
+    padding-left: 50px;
+    margin-bottom: 10px;
+    font-size: 1em;  
+    text-align: center;
+}
+
+.wd-left-side-bar-navigation a {
+    color: red;
+    text-decoration: none;
+}
+
+.wd-left-side-bar-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
