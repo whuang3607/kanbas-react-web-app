@@ -7,3 +7,16 @@
     text-decoration: none;
     color: red;
 }
+
+.list-group.wd-modules > .list-group-item > .list-group > .list-group-item > .fa.fa-link {
+    color: green;
+}
+
+.list-group.wd-modules > .list-group-item > .list-group > .list-group-item > .fa.fa-external-link {
+    color: red;
+}
+
+.list-group.wd-modules > .list-group-item > .list-group > .list-group-item > a {
+    color: red;
+    text-decoration: none;
+}
