@@ -32,6 +32,11 @@
     text-decoration: none;
 }
 
+.wd-kanbas-navigation .account-icon {
+    color: white;
+    text-decoration: none;
+}
+
 .wd-left-side-bar-navigation {
     list-style: none;
     padding: 0px;  
