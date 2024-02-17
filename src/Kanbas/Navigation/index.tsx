@@ -22,9 +22,18 @@ function KanbasNavigation() {
     <ul className="wd-kanbas-navigation">
         {links.map((link, index) => (
           <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
-          <Link to={`/Kanbas/${link.label}`}> 
-            {link.label == "Account" && <i className="">{link.icon}</i>}
-            {link.label} 
+          <Link to={`/Kanbas/${link.label}`}>
+            {link.label == "NEU" && <i>{link.icon}</i>}
+            {link.label == "Account" && <i className="account-icon">{link.icon}</i>}
+            {link.label == "Dashboard" && <i>{link.icon}</i>}
+            {link.label == "Courses" && <i>{link.icon}</i>}
+            {link.label == "Calendar" && <i>{link.icon}</i>}
+            {link.label == "Inbox" && <i>{link.icon}</i>}
+            {link.label == "History" && <i>{link.icon}</i>}
+            {link.label == "Studio" && <i>{link.icon}</i>}
+            {link.label == "Commons" && <i>{link.icon}</i>}
+            {link.label == "Help" && <i>{link.icon}</i>}
+            {link.label}
           </Link>
           </li>
         ))}

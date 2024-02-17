@@ -37,6 +37,11 @@
     text-decoration: none;
 }
 
+.wd-kanbas-navigation li.wd-active .account-icon {
+    color: red;
+    text-decoration: none;
+}
+
 .wd-left-side-bar-navigation {
     list-style: none;
     padding: 0px;  
