@@ -1,0 +1,18 @@
+.breadcrumb {
+    --bs-breadcrumb-divider: ">";
+    
+}
+
+nav > ol > li > .wd-first-link {
+    text-decoration: none;
+    color: red;
+    font-size: 20px; 
+    padding-top: 10px;    
+}
+
+nav > ol > li > .wd-second-link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px; 
+    padding-top: 10px;
+}

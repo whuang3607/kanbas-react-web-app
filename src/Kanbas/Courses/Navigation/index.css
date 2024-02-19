@@ -55,3 +55,7 @@
 .wd-right-side-bar-navigation li i {
     color: red;
 }
+
+.d-flex.align-items-center.wd-breadcrumb-nav {
+    --bs-breadcrumb-divider: ">";
+}
