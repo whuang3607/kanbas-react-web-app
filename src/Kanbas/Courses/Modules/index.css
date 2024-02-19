@@ -36,3 +36,11 @@
   flex-direction: row;
 }
 
+.modules-subbullet {
+  padding-left: 40px;
+}
+
+.slides-links {
+  text-decoration: none;
+  color: red;
+}

@@ -55,30 +55,24 @@
       },
       {
         "_id": "M1L9",
-        "name": "Full Stack Developer - Chapter 1 - Introduction",
-        "description": "Chapter 1 of textbook",
-        "module": "M1"
-      },
-      {
-        "_id": "M1L10",
         "name": "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML",
         "description": "Chapter 2 of textbook",
         "module": "M1"
       },
       {
-        "_id": "M1L11",
+        "_id": "M1L10",
         "name": "Slides",
         "description": "Slides for this module",
         "module": "M1"
       },
       {
-        "_id": "M1L12",
+        "_id": "M1L11",
         "name": "Introduction to Web Development",
         "description": "Slides for introducing Web Development",
         "module": "M1"
       },
       {
-        "_id": "M1L13",
+        "_id": "M1L12",
         "name": "Creating an HTTP server with Node.js",
         "description": "Slides for creating an HTTP server with Node.js",
         "module": "M1"
@@ -209,30 +203,24 @@
       },
       {
         "_id": "M1L9",
-        "name": "Full Stack Developer - Chapter 1 - Introduction",
-        "description": "Chapter 1 of textbook",
-        "module": "M1"
-      },
-      {
-        "_id": "M1L10",
         "name": "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML",
         "description": "Chapter 2 of textbook",
         "module": "M1"
       },
       {
-        "_id": "M1L11",
+        "_id": "M1L10",
         "name": "Slides",
         "description": "Slides for this module",
         "module": "M1"
       },
       {
-        "_id": "M1L12",
+        "_id": "M1L11",
         "name": "Introduction to Web Development",
         "description": "Slides for introducing Web Development",
         "module": "M1"
       },
       {
-        "_id": "M1L13",
+        "_id": "M1L12",
         "name": "Creating an HTTP server with Node.js",
         "description": "Slides for creating an HTTP server with Node.js",
         "module": "M1"
@@ -363,30 +351,24 @@
       },
       {
         "_id": "M1L9",
-        "name": "Full Stack Developer - Chapter 1 - Introduction",
-        "description": "Chapter 1 of textbook",
-        "module": "M1"
-      },
-      {
-        "_id": "M1L10",
         "name": "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML",
         "description": "Chapter 2 of textbook",
         "module": "M1"
       },
       {
-        "_id": "M1L11",
+        "_id": "M1L10",
         "name": "Slides",
         "description": "Slides for this module",
         "module": "M1"
       },
       {
-        "_id": "M1L12",
+        "_id": "M1L11",
         "name": "Introduction to Web Development",
         "description": "Slides for introducing Web Development",
         "module": "M1"
       },
       {
-        "_id": "M1L13",
+        "_id": "M1L12",
         "name": "Creating an HTTP server with Node.js",
         "description": "Slides for creating an HTTP server with Node.js",
         "module": "M1"
@@ -517,30 +499,24 @@
       },
       {
         "_id": "M1L9",
-        "name": "Full Stack Developer - Chapter 1 - Introduction",
-        "description": "Chapter 1 of textbook",
-        "module": "M1"
-      },
-      {
-        "_id": "M1L10",
         "name": "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML",
         "description": "Chapter 2 of textbook",
         "module": "M1"
       },
       {
-        "_id": "M1L11",
+        "_id": "M1L10",
         "name": "Slides",
         "description": "Slides for this module",
         "module": "M1"
       },
       {
-        "_id": "M1L12",
+        "_id": "M1L11",
         "name": "Introduction to Web Development",
         "description": "Slides for introducing Web Development",
         "module": "M1"
       },
       {
-        "_id": "M1L13",
+        "_id": "M1L12",
         "name": "Creating an HTTP server with Node.js",
         "description": "Slides for creating an HTTP server with Node.js",
         "module": "M1"
@@ -671,30 +647,24 @@
       },
       {
         "_id": "M1L9",
-        "name": "Full Stack Developer - Chapter 1 - Introduction",
-        "description": "Chapter 1 of textbook",
-        "module": "M1"
-      },
-      {
-        "_id": "M1L10",
         "name": "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML",
         "description": "Chapter 2 of textbook",
         "module": "M1"
       },
       {
-        "_id": "M1L11",
+        "_id": "M1L10",
         "name": "Slides",
         "description": "Slides for this module",
         "module": "M1"
       },
       {
-        "_id": "M1L12",
+        "_id": "M1L11",
         "name": "Introduction to Web Development",
         "description": "Slides for introducing Web Development",
         "module": "M1"
       },
       {
-        "_id": "M1L13",
+        "_id": "M1L12",
         "name": "Creating an HTTP server with Node.js",
         "description": "Slides for creating an HTTP server with Node.js",
         "module": "M1"
@@ -825,30 +795,24 @@
       },
       {
         "_id": "M1L9",
-        "name": "Full Stack Developer - Chapter 1 - Introduction",
-        "description": "Chapter 1 of textbook",
-        "module": "M1"
-      },
-      {
-        "_id": "M1L10",
         "name": "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML",
         "description": "Chapter 2 of textbook",
         "module": "M1"
       },
       {
-        "_id": "M1L11",
+        "_id": "M1L10",
         "name": "Slides",
         "description": "Slides for this module",
         "module": "M1"
       },
       {
-        "_id": "M1L12",
+        "_id": "M1L11",
         "name": "Introduction to Web Development",
         "description": "Slides for introducing Web Development",
         "module": "M1"
       },
       {
-        "_id": "M1L13",
+        "_id": "M1L12",
         "name": "Creating an HTTP server with Node.js",
         "description": "Slides for creating an HTTP server with Node.js",
         "module": "M1"
@@ -979,30 +943,24 @@
       },
       {
         "_id": "M1L9",
-        "name": "Full Stack Developer - Chapter 1 - Introduction",
-        "description": "Chapter 1 of textbook",
-        "module": "M1"
-      },
-      {
-        "_id": "M1L10",
         "name": "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML",
         "description": "Chapter 2 of textbook",
         "module": "M1"
       },
       {
-        "_id": "M1L11",
+        "_id": "M1L10",
         "name": "Slides",
         "description": "Slides for this module",
         "module": "M1"
       },
       {
-        "_id": "M1L12",
+        "_id": "M1L11",
         "name": "Introduction to Web Development",
         "description": "Slides for introducing Web Development",
         "module": "M1"
       },
       {
-        "_id": "M1L13",
+        "_id": "M1L12",
         "name": "Creating an HTTP server with Node.js",
         "description": "Slides for creating an HTTP server with Node.js",
         "module": "M1"

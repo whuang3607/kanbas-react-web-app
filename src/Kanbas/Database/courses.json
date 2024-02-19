@@ -13,10 +13,10 @@
     },
     {
         "_id": "CS4", "name": "Object-Oriented Design", "number": "CS5004", "startDate": "2023-05-10", 
-        "endDate": "2023-08-15", "image": "work_meme.jpg"
+        "endDate": "2023-08-15", "image": "work_meme.jpeg"
     },
     {
-        "_id": "CS5", "name": "Database Management Systems", "number": "CS5004", "startDate": "2023-05-10", 
+        "_id": "CS5", "name": "DBMS", "number": "CS5004", "startDate": "2023-05-10", 
         "endDate": "2023-08-15", "image": "meme.jpg"
     },
     {
@@ -24,7 +24,7 @@
         "endDate": "2023-08-15", "image": "procrastination_meme.jpg"
     },
     {
-        "_id": "CS7", "name": "Intensive Foundations of CS", "number": "CS5001", "startDate": "2023-05-10", 
-        "endDate": "2023-08-15", "image": "work_meme.jpg"
+        "_id": "CS7", "name": "Intensive Foundations", "number": "CS5001", "startDate": "2023-05-10", 
+        "endDate": "2023-08-15", "image": "work_meme.jpeg"
     }
 ]
