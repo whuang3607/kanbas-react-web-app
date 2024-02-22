@@ -1,0 +1,12 @@
+.list-group-item.list-group-item-action.course-status-buttons {
+    background-color: whitesmoke;
+}
+
+.to-do-links {
+    text-decoration: none;
+    color: red;
+}
+
+.to-do-deadline {
+    font-size: 15px;
+}

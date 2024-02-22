@@ -1,0 +1,26 @@
+.wd-assignment-image-color {
+    color: green;
+}
+  
+.wd-assignment-left-border-color {
+    border-left: 4px solid green !important;
+}
+
+.wd-assignment-edit-link {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.list-group > .list-group-item > .row > .col > .wd-module-link {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+.list-group > .list-group-item > .row > .col > .wd-due-date {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}

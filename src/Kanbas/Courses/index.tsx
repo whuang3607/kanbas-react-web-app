@@ -6,6 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css"
 import Modules from "./Modules";
 import Home from "./Home";
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/Editor";
+import Grades from "./Grades";
 
 function Courses() {
   const { courseId } = useParams();
@@ -50,10 +53,10 @@ function Courses() {
             <Route path="Modules" element={<Modules/>} />
             <Route path="Piazza" element={<h2>Piazza</h2>} />
             <Route path="Zoom" element={<h2>Zoom Meetings</h2>} />
-            <Route path="Assignments" element={<h2>Assignments</h2>} />
-            <Route path="Assignments/:assignmentId" element={<h2>Assignment Editor</h2>} />
+            <Route path="Assignments" element={<Assignments/>} />
+            <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>}/>
             <Route path="Quizzes" element={<h2>Quizzes</h2>} />
-            <Route path="Grades" element={<h2>Grades</h2>} />
+            <Route path="Grades" element={<Grades />} />
             <Route path="People" element={<h2>People</h2>} />
             <Route path="Panopto" element={<h2>Panopto Video</h2>} />
             <Route path="Discussions" element={<h2>Discussions</h2>} />

@@ -9,7 +9,7 @@ function ModuleList() {
   const modulesList = modules.filter((module) => module.course === courseId);
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
-    <>
+    <div className="col">
       <button className="btn btn-light">Collapse All</button>&emsp;
       <button className="btn btn-light">View Progress</button>&emsp;
       <select className="form-select-sm">
@@ -71,7 +71,7 @@ function ModuleList() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 export default ModuleList;
