@@ -1,5 +1,5 @@
-import { courses } from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { assignments, courses } from "../../Kanbas/Database";
+import { Navigate, Route, Routes, useParams, useLocation } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,22 +13,24 @@ import Grades from "./Grades";
 function Courses() {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
+  const location = useLocation();
+  const assignment = assignments.find((assignment) => assignment._id === location.pathname.split("/").slice(-1).join(""))
   return (
     <div>
         <h5>
             <nav className="breadcrumb">
                 <ol className="breadcrumb">
                     <li>&ensp;<HiMiniBars3 />&ensp;</li>
-                    <li className="breadcrumb-item"><a href="" className="wd-first-link">{course?.name}</a></li>
+                    <li className="breadcrumb-item"><span className="wd-first-link">{course?.name}</span></li>
                     <li className="breadcrumb-item">
                       <Routes>
                         <Route path="/" element={<Navigate to="Home" />} />
-                        <Route path="Home" element={<a href="" className="wd-second-link">Home</a>}/>
-                        <Route path="Modules" element={<a href="" className="wd-second-link">Modules</a>} />
-                        <Route path="Piazza" element={<a href="" className="wd-second-link">Piazza</a>} />
-                        <Route path="Zoom" element={<a href="" className="wd-second-link">Zoom Meetings</a>} />
-                        <Route path="Assignments" element={<a href="" className="wd-second-link">Assignments</a>} />
-                        <Route path="Assignments/:assignmentId" element={<a href="" className="wd-second-link">Assignment Editor</a>} />
+                        <Route path="Home" element={<span className="wd-second-link">Home</span>}/>
+                        <Route path="Modules" element={<span className="wd-second-link">Modules</span>} />
+                        <Route path="Piazza" element={<span className="wd-second-link">Piazza</span>} />
+                        <Route path="Zoom" element={<span className="wd-second-link">Zoom Meetings</span>} />
+                        <Route path="Assignments" element={<span className="wd-second-link">Assignments</span>} />
+                        <Route path="Assignments/:assignmentId" element={<span className="wd-first-link">Assignments</span>} />
                         <Route path="Quizzes" element={<a href="" className="wd-second-link">Quizzes</a>} />
                         <Route path="Grades" element={<a href="" className="wd-second-link">Grades</a>} />
                         <Route path="People" element={<a href="" className="wd-second-link">People</a>} />
@@ -39,6 +41,13 @@ function Courses() {
                         <Route path="Files" element={<a href="" className="wd-second-link">Files</a>} />
                       </Routes>
                     </li>
+                    <Routes>
+                      <Route path="Assignments/:assignmentId" element={
+                          <li className="breadcrumb-item">
+                              <span className="wd-second-link">{assignment?.title}</span>
+                          </li>
+                        } />
+                    </Routes>
                 </ol>
             </nav>
         </h5>

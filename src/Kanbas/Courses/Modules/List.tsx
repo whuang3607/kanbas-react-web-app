@@ -38,28 +38,28 @@ function ModuleList() {
                 {module.lessons?.map((lesson) => (
                   <li className="list-group-item">
                     <FaEllipsisV className="me-2" />
-                    {lesson._id == "M1L1" && lesson.name}
-                    {lesson._id == "M1L2" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M1L3" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M1L4" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M1L5" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M1L6" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M1L7" && lesson.name}
-                    {lesson._id == "M1L8" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M1L9" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M1L10" && lesson.name}
-                    {lesson._id == "M1L11" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
-                    {lesson._id == "M1L12" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
-                    {lesson._id == "M2L1" && lesson.name}
-                    {lesson._id == "M2L2" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M2L3" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M2L4" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M2L5" && lesson.name}
-                    {lesson._id == "M2L6" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M2L7" && <span className="modules-subbullet">{lesson.name}</span>}
-                    {lesson._id == "M2L8" && lesson.name}
-                    {lesson._id == "M2L9" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
-                    {lesson._id == "M2L10" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
+                    {lesson._id === "M1L1" && lesson.name}
+                    {lesson._id === "M1L2" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M1L3" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M1L4" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M1L5" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M1L6" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M1L7" && lesson.name}
+                    {lesson._id === "M1L8" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M1L9" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M1L10" && lesson.name}
+                    {lesson._id === "M1L11" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
+                    {lesson._id === "M1L12" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
+                    {lesson._id === "M2L1" && lesson.name}
+                    {lesson._id === "M2L2" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M2L3" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M2L4" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M2L5" && lesson.name}
+                    {lesson._id === "M2L6" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M2L7" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M2L8" && lesson.name}
+                    {lesson._id === "M2L9" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
+                    {lesson._id === "M2L10" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
                     <span className="float-end">
                       <FaCheckCircle className="text-success" />
                       <FaEllipsisV className="ms-2" />
