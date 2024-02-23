@@ -10,7 +10,6 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 
-
 function Courses() {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
