@@ -9,18 +9,24 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
+import React, { useState } from 'react';
+import { FaCaretDown } from "react-icons/fa";
 
 function Courses() {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
   const location = useLocation();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
   const assignment = assignments.find((assignment) => assignment._id === location.pathname.split("/").slice(-1).join(""))
   return (
     <div>
         <h5>
             <nav className="breadcrumb">
                 <ol className="breadcrumb">
-                    <li>&ensp;<a href="index2.tsx"><HiMiniBars3 /></a>&ensp;</li>
+                    <li className="breadcrumb-item"><HiMiniBars3/></li>
                     <li className="breadcrumb-item"><span className="wd-first-link">{course?.name}</span></li>
                     <li className="breadcrumb-item">
                       <Routes>
@@ -48,6 +54,7 @@ function Courses() {
                           </li>
                         } />
                     </Routes>
+                    <li className="d-sm-block d-md-none col-1"><FaCaretDown/></li>
                 </ol>
             </nav>
         </h5>
