@@ -60,6 +60,16 @@ function ModuleList() {
                     {lesson._id === "M2L8" && lesson.name}
                     {lesson._id === "M2L9" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
                     {lesson._id === "M2L10" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
+                    {lesson._id === "M3L1" && lesson.name}
+                    {lesson._id === "M3L2" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M3L3" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M3L4" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M3L5" && lesson.name}
+                    {lesson._id === "M3L6" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M3L7" && <span className="modules-subbullet">{lesson.name}</span>}
+                    {lesson._id === "M3L8" && lesson.name}
+                    {lesson._id === "M3L9" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
+                    {lesson._id === "M3L10" && <span className="modules-subbullet"><FaLink style={{"color":"green"}}/>&emsp;<a className="slides-links" href="#">{lesson.name}</a>&emsp;<FaExternalLinkAlt style={{"color":"red"}}/></span>}
                     <span className="float-end">
                       <FaCheckCircle className="text-success" />
                       <FaEllipsisV className="ms-2" />
