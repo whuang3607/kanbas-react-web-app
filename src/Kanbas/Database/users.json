@@ -88,5 +88,15 @@
       "email": "legolas@mirkwood.com",
       "dob": "2879-07-15",
       "role": "FACULTY"
+    },
+    {
+      "_id": "130",
+      "username": "mah_goodness",
+      "password": "duh_hello",
+      "firstName": "Sum Ting",
+      "lastName": "Wong",
+      "email": "duh_hello@gmail.com",
+      "dob": "2000-02-12",
+      "role": "FACULTY"
     }
   ]
