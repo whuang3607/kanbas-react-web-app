@@ -8,10 +8,8 @@ function ClickEvent() {
     return (
       <div>
         <h2>Click Event</h2>
-        <button onClick={hello}>
-          Click Hello</button>
-        <button onClick={() => lifeIs("Good!")}>
-          Click Good</button>
+        <button onClick={hello}>Click Hello</button>
+        <button onClick={() => lifeIs("Good!")}>Click Good</button>
         <button
           onClick={() => {
             hello();
