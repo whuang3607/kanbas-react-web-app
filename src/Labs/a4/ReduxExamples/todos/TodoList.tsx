@@ -10,8 +10,8 @@ function TodoList() {
     <div>
       <h2>Todo List</h2>
       <ul className="list-group">
-        <TodoForm />
-        {todos.map((todo: TodoType) => (
+      <TodoForm />
+      {todos.map((todo: TodoType) => (
           <TodoItem todo={todo} />
         ))}
       </ul>

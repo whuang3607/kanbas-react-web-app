@@ -13,6 +13,8 @@ import ParentStateComponent from "./ParentStateComponent";
 import ReduxExamples from "./ReduxExamples";
 import { useSelector } from "react-redux";
 import { LabState } from "../store";
+import TodoList from "./ReduxExamples/todos/TodoList";
+import TodoForm from "./ReduxExamples/todos/TodoForm";
 
 const Assignment4 = () => {
   function sayHello() {
@@ -23,24 +25,30 @@ const Assignment4 = () => {
     <>
       <h1>Assignment 4</h1>
       <ClickEvent/>
+      <br/>
       <PassingDataOnEvent/>
+      <br/>
       <PassingFunctions theFunction={sayHello} />
+      <br/>
       <EventObject/>
+      <br/>
       <Counter/>
+      <br/>
       <BooleanStateVariables/>
+      <br/>
       <StringStateVariables/>
+      <br/>
       <DateStateVariable/>
+      <br/>
       <ObjectStateVariable/>
+      <br/>
       <ArrayStateVariable/>
+      <br/>
       <ParentStateComponent/>
+      <br/>
       <ReduxExamples/>
-      <ul className="list-group">
-        {todos.map((todo) => (
-          <li className="list-group-item" key={todo.id}>
-            {todo.title}
-          </li>
-        ))}
-      </ul>
+      <br/>
+      <TodoList />
     </>
   );
 };
