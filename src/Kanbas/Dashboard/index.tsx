@@ -8,13 +8,17 @@ function Dashboard() {
   const [course, setCourse] = useState({
     _id: "0", name: "New Course", number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
-    image: "valentine_meme.jpg"
+    image: "meme.jpg"
   });
 
   const addNewCourse = () => {
     const newCourse = { ...course,
                         _id: new Date().getTime().toString() };
     setCourses([...courses, { ...course, ...newCourse }]);
+  };
+
+  const deleteCourse = (courseId: string) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
   };
 
   return (
@@ -48,6 +52,14 @@ function Dashboard() {
                   <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}
                   style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
                     {course.name}
+                    <br/>
+                    <button onClick={(event) => {
+                        event.preventDefault();
+                        deleteCourse(course._id);
+                      }} className="btn btn-danger">
+                      Delete
+                    </button>
+
                   </Link>
                   <p className="card-text">{course.number}</p>
                   <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">
