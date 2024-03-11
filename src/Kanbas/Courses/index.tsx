@@ -12,7 +12,7 @@ import Grades from "./Grades";
 import React, { useState } from 'react';
 import { FaCaretDown } from "react-icons/fa";
 
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
   const location = useLocation();

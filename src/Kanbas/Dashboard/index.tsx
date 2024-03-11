@@ -2,25 +2,14 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import * as db from "../Database";
 
-function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
+function Dashboard(
+  { courses, course, setCourse, addNewCourse,
+    deleteCourse, updateCourse }: {
+    courses: any[]; course: any; setCourse: (course: any) => void;
+    addNewCourse: () => void; deleteCourse: (course: any) => void;
+    updateCourse: () => void; }
+) {
   
-  const [course, setCourse] = useState({
-    _id: "0", name: "New Course", number: "New Number",
-    startDate: "2023-09-10", endDate: "2023-12-15",
-    image: "meme.jpg"
-  });
-
-  const addNewCourse = () => {
-    const newCourse = { ...course,
-                        _id: new Date().getTime().toString() };
-    setCourses([...courses, { ...course, ...newCourse }]);
-  };
-
-  const deleteCourse = (courseId: string) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  };
-
   return (
     <div className="p-4">
       <h1>Dashboard</h1><hr />
@@ -37,8 +26,12 @@ function Dashboard() {
       <input value={course.endDate} className="form-control" type="date" 
       onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
 
-      <button onClick={addNewCourse} className="btn btn-primary">
+      <button onClick={addNewCourse} className="btn btn-success">
         Add
+      </button>
+      &emsp;
+      <button onClick={updateCourse} className="btn btn-info">
+        Update
       </button><br/>
       <br/>
       <h2>Published Courses ({courses.length})</h2><hr />
@@ -53,6 +46,13 @@ function Dashboard() {
                   style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
                     {course.name}
                     <br/>
+                    <button onClick={(event) => {
+                        event.preventDefault();
+                        setCourse(course);
+                      }} className="btn btn-info">
+                      Edit
+                    </button>
+                    &emsp;
                     <button onClick={(event) => {
                         event.preventDefault();
                         deleteCourse(course._id);
