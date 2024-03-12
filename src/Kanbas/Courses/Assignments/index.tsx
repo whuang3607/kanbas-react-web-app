@@ -46,7 +46,6 @@ function Assignments() {
             {assignmentList
                 .filter((assignment) => assignment.course === courseId)
                 .map((assignment, index) => (
-            //.map((assignment) => (
                 <li className="list-group-item">
                     <div className="row">
                         <div className="col-1">
