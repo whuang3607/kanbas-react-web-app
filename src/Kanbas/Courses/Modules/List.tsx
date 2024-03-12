@@ -57,9 +57,7 @@ function ModuleList() {
       <ul className="list-group wd-modules">
         {moduleList
           .filter((module) => module.course === courseId)
-          .map((module, index) => (
-        
-        //{modulesList.map((module) => (
+          .map((module, index) => (        
           <li key={index} className="list-group-item">
             <div>
               <FaEllipsisV className="me-2" />
