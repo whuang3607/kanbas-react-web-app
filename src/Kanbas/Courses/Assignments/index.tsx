@@ -3,10 +3,23 @@ import { FaCaretDown, FaCheckCircle, FaEllipsisV, FaPlusCircle, FaRegEdit } from
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
 import "./index.css"
+import {
+    addAssignment,
+    deleteAssignment,
+    updateAssignment,
+    selectAssignment,
+} from "./assignmentsReducer";
+import { KanbasState } from "../../store";
+import { useSelector, useDispatch } from "react-redux";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
+  //const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
+  const assignmentList = useSelector((state: KanbasState) => 
+    state.modulesReducer.modules);
+  const module = useSelector((state: KanbasState) => 
+    state.modulesReducer.module);
+  const dispatch = useDispatch();
   return (
     <>
         <div className="row">

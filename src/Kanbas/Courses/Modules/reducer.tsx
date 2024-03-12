@@ -23,18 +23,20 @@ const modulesSlice = createSlice({
     },
     updateModule: (state, action) => {
       state.modules = state.modules.map((module) => {
-        if (module._id === action.payload._id) {
+        if (module._id === action.payload._id && module.course == action.payload.course) {
           return action.payload;
         } else {
           return module;
         }
       });
+      console.log(state.modules);
     },
     setModule: (state, action) => {
       state.module = action.payload;
     },
   },
 });
+
 
 export const { addModule, deleteModule,
   updateModule, setModule } = modulesSlice.actions;

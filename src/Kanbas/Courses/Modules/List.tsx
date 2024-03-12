@@ -13,16 +13,20 @@ import {
 } from "./reducer";
 import { KanbasState } from "../../store";
 
+type LessonType = {
+  "_id": string,
+  "name": string,
+  "description": string,
+  "module": string
+};
+
 function ModuleList() {
   const { courseId } = useParams();
-  const [modulesList, setModuleList] = useState(modules);
-
   const moduleList = useSelector((state: KanbasState) => 
     state.modulesReducer.modules);
   const module = useSelector((state: KanbasState) => 
     state.modulesReducer.module);
   const dispatch = useDispatch();
-  const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
     <div className="col">
       <button className="btn btn-light">Collapse All</button>&emsp;
@@ -52,12 +56,12 @@ function ModuleList() {
         className="form-control"
       /><br/>
       <ul className="list-group wd-modules">
-        {modulesList
+        {moduleList
           .filter((module) => module.course === courseId)
           .map((module, index) => (
         
         //{modulesList.map((module) => (
-          <li key={index} className="list-group-item" onClick={() => setSelectedModule(module)}>
+          <li key={index} className="list-group-item">
             <div>
               <FaEllipsisV className="me-2" />
               <FaCaretRight className="me-2" />
@@ -78,9 +82,9 @@ function ModuleList() {
                 <FaEllipsisV className="ms-2" />
               </span>
             </div>
-            {selectedModule._id === module._id && (
+            {module._id && (
               <ul className="list-group">
-                {module.lessons?.map((lesson) => (
+                {module.lessons?.map((lesson : LessonType) => (
                   <li className="list-group-item">
                     <FaEllipsisV className="me-2" />
                     {lesson._id === "M1L1" && lesson.name}

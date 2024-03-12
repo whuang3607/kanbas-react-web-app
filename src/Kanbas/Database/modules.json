@@ -81,7 +81,7 @@
   },
   {
     "_id": "M2",
-    "name": "Week 2 - Formatting User Interfaces with HTML",
+    "name": "Week 2 - HTML User Interfaces",
     "description": "Create web page using HTML",
     "course": "CS1",
     "lessons": [
@@ -149,7 +149,7 @@
   },
   {
     "_id": "M3",
-    "name": "Week 3 - Styling User Interfaces with CSS",
+    "name": "Week 3 - CSS",
     "description": "Styling a web page using CSS",
     "course": "CS1",
     "lessons": [
