@@ -14,23 +14,18 @@ import { useSelector, useDispatch } from "react-redux";
 
 function Assignments() {
   const { courseId } = useParams();
-  //const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
   const assignmentList = useSelector((state: KanbasState) => 
-    state.modulesReducer.modules);
-  const module = useSelector((state: KanbasState) => 
-    state.modulesReducer.module);
+    state.assignmentsReducer.assignments);
   const dispatch = useDispatch();
   return (
     <>
-        <div className="row">
+        <div className="form-group row">
             <div className="col">
-                <form>
-                    <input type="text" placeholder="Search for Assignment"/>
-                </form>
+                <input type="text" className="form-control" placeholder="Search for Assignment"/>
             </div>
             <div className="col">
-                <button className="btn btn-light">+ Group</button>&ensp;
-                <button className="btn btn-danger">+ Assignment</button>&ensp;
+                <button className="btn btn-light">Add Group</button>&ensp;
+                <button className="btn btn-success">Add Assignment</button>&ensp;
                 <button className="btn btn-light">
                     <FaEllipsisV/>
                 </button>
@@ -48,7 +43,10 @@ function Assignments() {
             </span>
             </div>
             <ul className="list-group wd-assignment-left-border-color">
-            {assignmentList.map((assignment) => (
+            {assignmentList
+                .filter((assignment) => assignment.course === courseId)
+                .map((assignment, index) => (
+            //.map((assignment) => (
                 <li className="list-group-item">
                     <div className="row">
                         <div className="col-1">

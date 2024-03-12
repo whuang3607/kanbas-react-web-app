@@ -35,7 +35,6 @@ function ModuleList() {
         <option value="publish_all">Publish All</option>
         <option value="unpublish_all">Unpublish All</option>
       </select>&emsp;
-      <button className="btn btn-danger">+ Module</button>&emsp;
       <button className="btn btn-light"><BsThreeDotsVertical className="me-2"/></button>&emsp;
       <br/><br/>
       <div className="form-group row">
