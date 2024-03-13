@@ -17,6 +17,8 @@ function Assignments() {
   const assignmentList = useSelector((state: KanbasState) => 
     state.assignmentsReducer.assignments);
   const dispatch = useDispatch();
+//   if I want to add an assignment, call addAssignment function when assginment is added and saved
+//   if I want to update an assignment, call updateAssignment function when assignment is updated and saved
   return (
     <>
         <div className="form-group row">
@@ -24,8 +26,12 @@ function Assignments() {
                 <input type="text" className="form-control" placeholder="Search for Assignment"/>
             </div>
             <div className="col">
-                <button className="btn btn-light">Add Group</button>&ensp;
-                <button className="btn btn-success">Add Assignment</button>&ensp;
+                <button className="btn btn-light">+ Group</button>&ensp;
+
+                <Link to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`} 
+                className="wd-assignment-edit-link">
+                    <button className="btn btn-success">+ Assignment</button>
+                </Link>&ensp;
                 <button className="btn btn-light">
                     <FaEllipsisV/>
                 </button>
@@ -67,15 +73,6 @@ function Assignments() {
                                 {assignment.title === "A3 - JS + REACT" && <span style={{"color":"red"}}>Multiple Modules </span>}
                                 {assignment.title === "A3 - JS + REACT" && <span>| Due Oct 16 at 11:59pm | 100 pts</span>}
                                 {assignment.title === "A3 - JS + REACT" && <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>}
-                                {assignment.title === "A4 - STATE + REDUX" && <span style={{"color":"red"}}>Multiple Modules </span>}
-                                {assignment.title === "A4 - STATE + REDUX" && <span>| Due Oct 30 at 11:59pm | 100 pts</span>}
-                                {assignment.title === "A4 - STATE + REDUX" && <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>}
-                                {assignment.title === "A5 - NODE + SESSION" && <span style={{"color":"red"}}>Multiple Modules </span>}
-                                {assignment.title === "A5 - NODE + SESSION" && <span>| Due Nov 13 at 11:59pm | 100 pts</span>}
-                                {assignment.title === "A5 - NODE + SESSION" && <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>}
-                                {assignment.title === "A6 - MONGO" && <span style={{"color":"red"}}>Multiple Modules </span>}
-                                {assignment.title === "A6 - MONGO" && <span>| Due Sep 18 at 11:59pm | 100 pts</span>}
-                                {assignment.title === "A6 - MONGO" && <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>}
                             </div>
                         </div>
                     </div>

@@ -4,23 +4,42 @@ import { assignments } from "../../../Database";
 import { FaCalendar } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import "./index.css"
+import { useDispatch, useSelector } from "react-redux";
+import { KanbasState } from "../../../store";
+import {
+    addAssignment,
+    updateAssignment,
+} from "./../assignmentsReducer";
+
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
   const assignment = assignments.find((assignment) => assignment._id === assignmentId);
-  const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+
+  const { courseId } = useParams();
+  const assignmentList = useSelector((state: KanbasState) => 
+    state.assignmentsReducer.assignments);
+  // filter out assignment based on assignmentId from assignment list, get particular assignment details
+  const dispatch = useDispatch();
+
   return (
     <div>
       <h2>Assignment Name</h2>
-      <input value={assignment?.title} className="form-control mb-2" />
+      {assignmentId === "NewAssignment" && <input value="New Assignment" className="form-control mb-2" />}
+      {assignmentId === "NewAssignment" && 
+      <textarea className="form-control" id="textarea1" rows={3}>
+        New Assignment Description
+      </textarea>}
+      {assignmentId !== "NewAssignment" && <input value={assignment?.title} className="form-control mb-2" />}
+      {assignmentId !== "NewAssignment" &&       
       <textarea className="form-control" id="textarea1" rows={3}>
         This is the assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.
-      </textarea>
+      </textarea>}
       <br/>
       <form>
         <div className="form-group row">
@@ -28,12 +47,12 @@ function AssignmentEditor() {
                 Points
             </label>
             <div className="col-sm-10">
-                <input className="form-control w-50" id="points" value="100" max="100" min="0"/>
+                <input type="number" className="form-control w-50" id="points" placeholder="100" max="100" min="0"/>
             </div>
         </div>
       </form>
       <br/>
-      <form>
+      {/* <form>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">
                 Assignment Group
@@ -72,14 +91,14 @@ function AssignmentEditor() {
         </div>
         <div className="w-25"></div>
       </div>
-      <br/>
+      <br/> */}
       <form>
           <div className="form-group row">
               <label className="col-sm-2 col-form-label">
                   Assign
               </label>
               <div className="col-sm-10 border border-black rounded w-50">
-                  <div className="row assign-format">
+                  {/* <div className="row assign-format">
                       Assign to
                   </div>
                   <div className="border border-black rounded">
@@ -89,7 +108,7 @@ function AssignmentEditor() {
                               <IoMdClose/>
                           </button>
                       </div>
-                  </div>
+                  </div> */}
                   <div className="row due-format">
                       Due
                   </div>
@@ -111,20 +130,20 @@ function AssignmentEditor() {
                   </div>
                   <div className="row">
                       <div className="input-group col">
-                          <input type="text" className="form-control" value="January 15, 2024, 11:59PM"/>
-                          <span className="input-group-text">
+                          <input type="date" className="form-control" placeholder=""/>
+                          {/* <span className="input-group-text">
                               <button className="btn">
                                   <FaCalendar/>
                               </button>
-                          </span>
+                          </span> */}
                       </div>
                       <div className="input-group col">
-                          <input type="text" className="form-control" value="January 15, 2024, 11:59PM"/>
-                          <span className="input-group-text">
+                          <input type="date" className="form-control" placeholder=""/>
+                          {/* <span className="input-group-text">
                               <button className="btn">
                                 <FaCalendar/>
                               </button>
-                          </span>
+                          </span> */}
                       </div>
                   </div>
               </div>

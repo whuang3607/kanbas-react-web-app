@@ -21,6 +21,7 @@ function Courses({ courses }: { courses: any[]; }) {
     setDropdownOpen(!dropdownOpen);
   };
   const assignment = assignments.find((assignment) => assignment._id === location.pathname.split("/").slice(-1).join(""))
+  console.log(assignment)
   return (
     <div>
         <h5>
@@ -50,7 +51,8 @@ function Courses({ courses }: { courses: any[]; }) {
                     <Routes>
                       <Route path="Assignments/:assignmentId" element={
                           <li className="breadcrumb-item">
-                              <span className="wd-second-link">{assignment?.title}</span>
+                            {typeof assignment === "undefined" && <span className="wd-second-link">New Assignment</span>}
+                            <span className="wd-second-link">{assignment?.title}</span>
                           </li>
                         } />
                     </Routes>
