@@ -3,7 +3,7 @@ import { assignments } from "../../Database";
 
 const initialState = {
   assignments: assignments,
-  assignment: { name: "New Assignment", description: "New Description" },
+  assignment: { name: "New Assignment", description: "New Description", dueDate: "3/13/2024", points: "100"},
 };
 
 const assignmentsSlice = createSlice({

@@ -26,7 +26,6 @@ function AssignmentEditor() {
     state.assignmentsReducer.assignments);
   // filter out assignment based on assignmentId from assignment list, get particular assignment details
   const dispatch = useDispatch();
-
   return (
     <div>
       <h2>Assignment Name</h2>
@@ -47,7 +46,7 @@ function AssignmentEditor() {
                 Points
             </label>
             <div className="col-sm-10">
-                <input type="number" className="form-control w-50" id="points" placeholder="100" max="100" min="0"/>
+                <input type="number" className="form-control w-50" id="points" placeholder={assignment?.points} max="100" min="0"/>
             </div>
         </div>
       </form>
@@ -113,7 +112,7 @@ function AssignmentEditor() {
                       Due
                   </div>
                   <div className="input-group">
-                      <input type="text" className="form-control" value="January 15, 2024, 11:59PM"/>
+                      <input type="text" className="form-control" placeholder={assignment?.dueDate} />
                       <span className="input-group-text">
                           <button className="btn">
                               <FaCalendar/>
@@ -130,20 +129,20 @@ function AssignmentEditor() {
                   </div>
                   <div className="row">
                       <div className="input-group col">
-                          <input type="date" className="form-control" placeholder=""/>
-                          {/* <span className="input-group-text">
+                          <input type="text" className="form-control" placeholder={assignment?.dueDate}/>
+                          <span className="input-group-text">
                               <button className="btn">
                                   <FaCalendar/>
                               </button>
-                          </span> */}
+                          </span>
                       </div>
                       <div className="input-group col">
-                          <input type="date" className="form-control" placeholder=""/>
-                          {/* <span className="input-group-text">
+                          <input type="text" className="form-control" placeholder={assignment?.dueDate}/>
+                          <span className="input-group-text">
                               <button className="btn">
                                 <FaCalendar/>
                               </button>
-                          </span> */}
+                          </span>
                       </div>
                   </div>
               </div>
@@ -158,10 +157,10 @@ function AssignmentEditor() {
           </div>
       </form>
       <br/>
-      <div className="form-check col">
+      {/* <div className="form-check col">
           <input className="form-check-input" type="checkbox" id="r7"/>
           <label className="form-check-label">Notify users that this content has changed</label>
-      </div>
+      </div> */}
       <div className="cancel-save-buttons">
         <button onClick={handleSave} className="btn btn-success ms-2 float-end">
           Save
