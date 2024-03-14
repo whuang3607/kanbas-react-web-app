@@ -9,7 +9,6 @@ import {
 } from "./assignmentsReducer";
 import { KanbasState } from "../../store";
 import { useSelector, useDispatch } from "react-redux";
-
 function Assignments() {
   const { courseId } = useParams();
   const assignmentList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
