@@ -1,7 +1,5 @@
-import React from "react";
 import { FaCaretDown, FaCheckCircle, FaEllipsisV, FaPlusCircle, FaRegEdit } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
 import "./index.css"
 import {
     deleteAssignment,
@@ -9,12 +7,32 @@ import {
 } from "./assignmentsReducer";
 import { KanbasState } from "../../store";
 import { useSelector, useDispatch } from "react-redux";
+import React, {useState} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Modal, Button} from 'react-bootstrap';
+
 function Assignments() {
   const { courseId } = useParams();
   const assignmentList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
-  console.log(assignment)
+  //console.log(assignment)
   const dispatch = useDispatch();
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => {
+      setShow(false);
+  }
+  const handleDeleteClose = () => {
+      dispatch(deleteAssignment(assignment._id))
+      setShow(false);
+  }
+  const handleShow = () => {
+      dispatch(selectAssignment(assignment));
+      console.log(assignment);
+      setShow(true);
+  }
+  console.log(handleShow);
+
   return (
     <>
         <div className="form-group row">
@@ -73,6 +91,26 @@ function Assignments() {
                                     onClick={() => dispatch(deleteAssignment(assignment._id))}>
                                         Delete
                                     </button>                                     */}
+                                    <Button className="nextButton btn btn-danger" onClick={handleShow}>
+                                        Delete
+                                    </Button>
+
+                                    <Modal show={show} onHide={handleClose}>
+                                        <Modal.Header closeButton>
+                                        <Modal.Title>Delete {}</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Do you want to delete the following Assignment: {}</Modal.Body>
+                                        <Modal.Footer>
+                                        <Button variant="secondary" onClick={handleClose}>
+                                            Cancel
+                                        </Button>
+                                        <Link to={`/Kanbas/Courses/${courseId}/Assignments`} 
+                                            onClick={handleDeleteClose} 
+                                            className="btn btn-danger ms-2 float-end">
+                                            Delete
+                                        </Link>
+                                        </Modal.Footer>
+                                    </Modal>
                                 </span>
                             </div>
                         </div>
