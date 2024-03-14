@@ -14,8 +14,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignmentList = useSelector((state: KanbasState) => 
-    state.assignmentsReducer.assignments);
+  const assignmentList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
+  console.log(assignment)
   const dispatch = useDispatch();
 //   if I want to add an assignment, call addAssignment function when assginment is added and saved
 //   if I want to update an assignment, call updateAssignment function when assignment is updated and saved
@@ -29,7 +30,8 @@ function Assignments() {
                 <button className="btn btn-light">+ Group</button>&ensp;
 
                 <Link to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`} 
-                className="wd-assignment-edit-link">
+                className="wd-assignment-edit-link" onClick={() => dispatch(selectAssignment({ title: "New Assignment", description: "New Assignment Description", 
+                dueDate: "03/13/2024", points: "100", availableFromDate: "02/28/2024", availableUntilDate: "03/27/2024"}))}>
                     <button className="btn btn-success">+ Assignment</button>
                 </Link>&ensp;
                 <button className="btn btn-light">
@@ -62,7 +64,8 @@ function Assignments() {
                         </div>
                         <div className="col">
                             <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} 
-                            className="wd-assignment-edit-link">{assignment.title}</Link><br/>
+                            className="wd-assignment-edit-link" onClick={() => dispatch(selectAssignment(assignment))}>{assignment.title}
+                            </Link><br/>
                             <div>
                                 {assignment.title === "A1 - ENV + HTML" && <span style={{"color":"red"}}>Multiple Modules </span>}
                                 {assignment.title === "A1 - ENV + HTML" && <span>| Due {assignment.dueDate} at 11:59pm | 100 pts</span>}

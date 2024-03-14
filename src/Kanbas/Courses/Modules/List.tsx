@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import "./index.css";
-import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaCaretRight, FaLink, FaExternalLinkAlt } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useParams } from "react-router";
@@ -22,10 +20,8 @@ type LessonType = {
 
 function ModuleList() {
   const { courseId } = useParams();
-  const moduleList = useSelector((state: KanbasState) => 
-    state.modulesReducer.modules);
-  const module = useSelector((state: KanbasState) => 
-    state.modulesReducer.module);
+  const moduleList = useSelector((state: KanbasState) => state.modulesReducer.modules);
+  const module = useSelector((state: KanbasState) => state.modulesReducer.module);
   const dispatch = useDispatch();
   return (
     <div className="col">
