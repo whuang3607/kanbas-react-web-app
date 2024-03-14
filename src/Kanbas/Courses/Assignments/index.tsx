@@ -4,9 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
 import "./index.css"
 import {
-    addAssignment,
     deleteAssignment,
-    updateAssignment,
     selectAssignment,
 } from "./assignmentsReducer";
 import { KanbasState } from "../../store";
@@ -18,8 +16,6 @@ function Assignments() {
   const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
   console.log(assignment)
   const dispatch = useDispatch();
-//   if I want to add an assignment, call addAssignment function when assginment is added and saved
-//   if I want to update an assignment, call updateAssignment function when assignment is updated and saved
   return (
     <>
         <div className="form-group row">
@@ -54,7 +50,7 @@ function Assignments() {
             {assignmentList
                 .filter((assignment) => assignment.course === courseId)
                 .map((assignment, index) => (
-                <li className="list-group-item">
+                <li key={index} className="list-group-item">
                     <div className="row">
                         <div className="col-1">
                             <FaEllipsisV className="me-2" />
@@ -67,15 +63,9 @@ function Assignments() {
                             className="wd-assignment-edit-link" onClick={() => dispatch(selectAssignment(assignment))}>{assignment.title}
                             </Link><br/>
                             <div>
-                                {assignment.title === "A1 - ENV + HTML" && <span style={{"color":"red"}}>Multiple Modules </span>}
-                                {assignment.title === "A1 - ENV + HTML" && <span>| Due {assignment.dueDate} at 11:59pm | 100 pts</span>}
-                                {assignment.title === "A1 - ENV + HTML" && <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>}
-                                {assignment.title === "A2 - CSS + BOOTSTRAP" && <span style={{"color":"red"}}>Multiple Modules </span>}
-                                {assignment.title === "A2 - CSS + BOOTSTRAP" && <span>| Due {assignment.dueDate} at 11:59pm | 100 pts</span>}
-                                {assignment.title === "A2 - CSS + BOOTSTRAP" && <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>}
-                                {assignment.title === "A3 - JS + REACT" && <span style={{"color":"red"}}>Multiple Modules </span>}
-                                {assignment.title === "A3 - JS + REACT" && <span>| Due {assignment.dueDate} at 11:59pm | 100 pts</span>}
-                                {assignment.title === "A3 - JS + REACT" && <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>}
+                                <span style={{"color":"red"}}>Multiple Modules </span>
+                                <span>| Due {assignment.dueDate} at 11:59pm | {assignment.points} pts</span>
+                                <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
                             </div>
                         </div>
                     </div>

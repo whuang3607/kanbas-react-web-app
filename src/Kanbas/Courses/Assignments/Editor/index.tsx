@@ -10,7 +10,6 @@ import {
     addAssignment,
     updateAssignment,
     selectAssignment,
-    deleteAssignment
 } from "./../assignmentsReducer";
 
 function AssignmentEditor() {
@@ -20,7 +19,6 @@ function AssignmentEditor() {
     const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    // for handleSave, need to determine if the course is new or old
     const handleSave = () => {
         console.log("Actually saving assignment TBD in later assignments");
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
@@ -177,9 +175,20 @@ function AssignmentEditor() {
                 <label className="form-check-label">Notify users that this content has changed</label>
             </div> */}
             <div className="cancel-save-buttons">
-            <button onClick={handleSave} className="btn btn-success ms-2 float-end">
-                Save
-            </button>
+            {assignmentId === "NewAssignment" &&
+                <Link to={`/Kanbas/Courses/${courseId}/Assignments`} 
+                onClick={() => dispatch(addAssignment({ ...assignment, course: courseId }))} 
+                className="btn btn-success ms-2 float-end">
+                    Save
+                </Link>
+            }
+            {assignmentId !== "NewAssignment" &&
+                <Link to={`/Kanbas/Courses/${courseId}/Assignments`} 
+                onClick={() => dispatch(updateAssignment(assignment))} 
+                className="btn btn-success ms-2 float-end">
+                    Save
+                </Link>
+            }
             <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
                     className="btn btn-danger float-end">
                 Cancel
