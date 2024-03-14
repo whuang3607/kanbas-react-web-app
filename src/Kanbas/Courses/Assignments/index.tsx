@@ -35,6 +35,7 @@ function Assignments() {
                 </button>
             </div>
         </div>
+        <br/>
         <ul className="list-group wd-modules">
         <li className="list-group-item">
             <div>
@@ -65,7 +66,15 @@ function Assignments() {
                             <div>
                                 <span style={{"color":"red"}}>Multiple Modules </span>
                                 <span>| Due {assignment.dueDate} at 11:59pm | {assignment.points} pts</span>
-                                <span className="float-end"><FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
+                                <span className="float-end">
+                                    <FaCheckCircle className="text-success" />
+                                    <FaEllipsisV className="ms-2" />&emsp;
+                                    {/* <button className="btn btn-danger float-end" 
+                                    style={{"borderRadius":"10px"}}
+                                    onClick={() => dispatch(deleteAssignment(assignment._id))}>
+                                        Delete
+                                    </button>                                     */}
+                                </span>
                             </div>
                         </div>
                     </div>

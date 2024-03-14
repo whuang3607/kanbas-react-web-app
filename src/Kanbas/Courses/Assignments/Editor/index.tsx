@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { assignments } from "../../../Database";
 import { FaCalendar } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import "./index.css"
@@ -15,14 +14,12 @@ import {
 function AssignmentEditor() {
     const { assignmentId } = useParams();
     const { courseId } = useParams();
-    const assignmentList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
     const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
-    const handleSave = () => {
-        console.log("Actually saving assignment TBD in later assignments");
-        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-    };
+    // const handleSave = () => {
+    //     console.log("Actually saving assignment TBD in later assignments");
+    //     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    // };
   
     return (
         <div>
