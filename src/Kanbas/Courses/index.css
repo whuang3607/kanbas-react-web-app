@@ -17,10 +17,6 @@ nav > ol > li > .wd-second-link {
     padding-top: 10px;
 }
 
-.left-hamburger-nav {
-    color: red;
-}
-
 .collapsible {
     background-color: #777;
     color: white;
@@ -42,4 +38,8 @@ nav > ol > li > .wd-second-link {
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+}
+
+.kanbas-navigation-hamburger {
+    padding-left: 200px;
 }

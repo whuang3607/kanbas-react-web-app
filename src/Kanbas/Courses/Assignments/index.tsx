@@ -15,24 +15,8 @@ function Assignments() {
   const { courseId } = useParams();
   const assignmentList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
-  //console.log(assignment)
   const dispatch = useDispatch();
-
   const [show, setShow] = useState(false);
-  const handleClose = () => {
-      setShow(false);
-  }
-  const handleDeleteClose = () => {
-      dispatch(deleteAssignment(assignment._id))
-      setShow(false);
-  }
-  const handleShow = () => {
-      dispatch(selectAssignment(assignment));
-      console.log(assignment);
-      setShow(true);
-  }
-  console.log(handleShow);
-
   return (
     <>
         <div className="form-group row">
@@ -66,8 +50,8 @@ function Assignments() {
             </div>
             <ul className="list-group wd-assignment-left-border-color">
             {assignmentList
-                .filter((assignment) => assignment.course === courseId)
-                .map((assignment, index) => (
+                .filter((currentAssignment) => currentAssignment.course === courseId)
+                .map((currentAssignment, index) => (
                 <li key={index} className="list-group-item">
                     <div className="row">
                         <div className="col-1">
@@ -78,37 +62,32 @@ function Assignments() {
                         </div>
                         <div className="col">
                             <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} 
-                            className="wd-assignment-edit-link" onClick={() => dispatch(selectAssignment(assignment))}>{assignment.title}
+                            className="wd-assignment-edit-link" onClick={() => dispatch(selectAssignment(currentAssignment))}>{currentAssignment.title}
                             </Link><br/>
                             <div>
                                 <span style={{"color":"red"}}>Multiple Modules </span>
-                                <span>| Due {assignment.dueDate} at 11:59pm | {assignment.points} pts</span>
+                                <span>| Due {currentAssignment.dueDate} at 11:59pm | {currentAssignment.points} pts</span>
                                 <span className="float-end">
                                     <FaCheckCircle className="text-success" />
                                     <FaEllipsisV className="ms-2" />&emsp;
-                                    {/* <button className="btn btn-danger float-end" 
-                                    style={{"borderRadius":"10px"}}
-                                    onClick={() => dispatch(deleteAssignment(assignment._id))}>
-                                        Delete
-                                    </button>                                     */}
-                                    <Button className="nextButton btn btn-danger" onClick={handleShow}>
+                                    <Button className="nextButton btn btn-danger" onClick={() => {setShow(true); dispatch(selectAssignment(currentAssignment))}}
+                                    style={{"borderRadius":"10px"}}>
                                         Delete
                                     </Button>
-
-                                    <Modal show={show} onHide={handleClose}>
-                                        <Modal.Header closeButton>
-                                        <Modal.Title>Delete {}</Modal.Title>
+                                    <Modal show={show} onHide={() => {setShow(false);}}>
+                                        <Modal.Header>
+                                            <Modal.Title>Delete {assignment.title}</Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body>Do you want to delete the following Assignment: {}</Modal.Body>
+                                        <Modal.Body>Do you want to delete the following Assignment?: {assignment.title}</Modal.Body>
                                         <Modal.Footer>
-                                        <Button variant="secondary" onClick={handleClose}>
-                                            Cancel
-                                        </Button>
-                                        <Link to={`/Kanbas/Courses/${courseId}/Assignments`} 
-                                            onClick={handleDeleteClose} 
-                                            className="btn btn-danger ms-2 float-end">
-                                            Delete
-                                        </Link>
+                                            <Button variant="secondary" onClick={() => {setShow(false);}}>
+                                                Cancel
+                                            </Button>
+                                            <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
+                                                onClick={() => {setShow(false); dispatch(deleteAssignment(assignment._id))}} 
+                                                className="btn btn-danger ms-2 float-end">
+                                                Yes
+                                            </Link>
                                         </Modal.Footer>
                                     </Modal>
                                 </span>

@@ -86,7 +86,7 @@ function Grades() {
                    <td>{user?.firstName} {user?.lastName}</td>
                    {as.map((assignment) => {
                      const grade = grades.find(
-                       (grade) => grade.student === enrollment.user && grade.assignment === assignment._id && assignment.course === courseId);
+                       (grade) => grade.student === enrollment.user && assignment.course === courseId);
                        return (<td>{grade?.grade || ""}</td>);})}
                 </tr>);
             })}

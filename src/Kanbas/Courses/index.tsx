@@ -11,23 +11,33 @@ import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 import React, { useState } from 'react';
 import { FaCaretDown } from "react-icons/fa";
+import {Modal, Button} from 'react-bootstrap';
+import KanbasNavigation from "../Navigation";
 
 function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
   const location = useLocation();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
   const assignment = assignments.find((assignment) => assignment._id === location.pathname.split("/").slice(-1).join(""))
-  console.log(assignment)
+  const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
   return (
     <div>
         <h5>
             <nav className="breadcrumb">
-                <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><HiMiniBars3/></li>
+              <div className="col-2">
+                <Button className="nextButton btn btn-light" onClick={() => {setShow(true)}}>
+                    <HiMiniBars3/>
+                </Button>
+                <Modal show={show} onHide={() => {setShow(false);}}>
+                    <Modal.Header closeButton></Modal.Header>
+                    <Modal.Body className="kanbas-navigation-hamburger">
+                      <KanbasNavigation/>
+                    </Modal.Body>
+                </Modal>
+              </div>
+              <div className="col">
+              <ol className="breadcrumb">
                     <li className="breadcrumb-item"><span className="wd-first-link">{course?.name}</span></li>
                     <li className="breadcrumb-item">
                       <Routes>
@@ -38,14 +48,14 @@ function Courses({ courses }: { courses: any[]; }) {
                         <Route path="Zoom" element={<span className="wd-second-link">Zoom Meetings</span>} />
                         <Route path="Assignments" element={<span className="wd-second-link">Assignments</span>} />
                         <Route path="Assignments/:assignmentId" element={<span className="wd-first-link">Assignments</span>} />
-                        <Route path="Quizzes" element={<a href="" className="wd-second-link">Quizzes</a>} />
-                        <Route path="Grades" element={<a href="" className="wd-second-link">Grades</a>} />
-                        <Route path="People" element={<a href="" className="wd-second-link">People</a>} />
-                        <Route path="Panopto" element={<a href="" className="wd-second-link">Panopto Video</a>} />
-                        <Route path="Discussions" element={<a href="" className="wd-second-link">Discussions</a>} />
-                        <Route path="Announcements" element={<a href="" className="wd-second-link">Announcements</a>} />
-                        <Route path="Pages" element={<a href="" className="wd-second-link">Pages</a>} />
-                        <Route path="Files" element={<a href="" className="wd-second-link">Files</a>} />
+                        <Route path="Quizzes" element={<span className="wd-second-link">Quizzes</span>} />
+                        <Route path="Grades" element={<span className="wd-second-link">Grades</span>} />
+                        <Route path="People" element={<span className="wd-second-link">People</span>} />
+                        <Route path="Panopto" element={<span className="wd-second-link">Panopto Video</span>} />
+                        <Route path="Discussions" element={<span className="wd-second-link">Discussions</span>} />
+                        <Route path="Announcements" element={<span className="wd-second-link">Announcements</span>} />
+                        <Route path="Pages" element={<span className="wd-second-link">Pages</span>} />
+                        <Route path="Files" element={<span className="wd-second-link">Files</span>} />
                       </Routes>
                     </li>
                     <Routes>
@@ -56,8 +66,20 @@ function Courses({ courses }: { courses: any[]; }) {
                           </li>
                         } />
                     </Routes>
-                    <li className="d-sm-block d-md-none col-1"><FaCaretDown/></li>
                 </ol>
+              </div>
+              <div className="float-end">
+                <Button className="nextButton btn btn-light d-sm-block d-md-none" onClick={() => {setShow2(true)}}>
+                  <FaCaretDown/>
+                </Button>
+                <Modal show={show2} onHide={() => {setShow2(false);}}>
+                    <Modal.Header closeButton></Modal.Header>
+                    <Modal.Body className="kanbas-navigation-hamburger">
+                      <CourseNavigation/>
+                    </Modal.Body>
+                </Modal>
+              </div>
+
             </nav>
         </h5>
         <div className="row">
