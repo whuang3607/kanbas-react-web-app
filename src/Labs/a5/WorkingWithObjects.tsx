@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 function WorkingWithObjects() {
     const [assignment, setAssignment] = useState({
-        id: 1, title: "NodeJS Assignment",
+        id: 1, 
+        title: "NodeJS Assignment",
         description: "Create a NodeJS server with ExpressJS",
-        due: "2021-10-10", completed: false, score: 0,
+        due: "2021-10-10", 
+        completed: false, 
+        score: 0,
     });
     const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment"
     
@@ -16,6 +19,7 @@ function WorkingWithObjects() {
         course: "CS 5610"
     });
     const MODULE_URL = "http://localhost:4000/a5/module"
+
     return (
         <div>
             <h3>Working With Objects</h3>
@@ -45,6 +49,30 @@ function WorkingWithObjects() {
                 </div>
             </div>
             <br/>
+            
+            <div className="row">
+                <div className="col-3">
+                    <input className="form-control" type="number" onChange={(e) => setAssignment({ ...assignment, score: parseInt(e.target.value) })} value={assignment.score}/>
+                </div>
+                <div className="col">
+                    <Link to={`${ASSIGNMENT_URL}/score/${assignment.score}`} className="btn btn-secondary">
+                        Update Score                    
+                    </Link>
+                </div>
+            </div>
+            <br/>
+
+            <div className="row">
+                <div className="col-3" style={{"textAlign": "center"}}>
+                    <input className="form-check-input" type="checkbox" id="completed-checkbox" onChange={(e) => setAssignment({ ...assignment, completed: e.target.checked})}/>
+                </div>
+                <div className="col">
+                    <Link to={`${ASSIGNMENT_URL}/completed/${assignment.completed}`} className="btn btn-warning">
+                        Update Completed                    
+                    </Link>
+                </div>
+            </div>
+            <br/>
 
             <h3>Working with Module Object</h3>
             <h4>Retrieving Module Object</h4>
@@ -69,6 +97,18 @@ function WorkingWithObjects() {
                 <div className="col">
                     <Link to={`${MODULE_URL}/name/${module.name}`} className="btn btn-primary">
                         Update Name                    
+                    </Link>
+                </div>
+            </div>
+            <br/>
+
+            <div className="row">
+                <div className="col-3">
+                    <input className="form-control" type="text" onChange={(e) => setModule({ ...module, description: e.target.value })} value={module.description}/>
+                </div>
+                <div className="col">
+                    <Link to={`${MODULE_URL}/description/${module.description}`} className="btn btn-success">
+                        Update Description                    
                     </Link>
                 </div>
             </div>
