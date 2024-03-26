@@ -67,7 +67,7 @@ function WorkingWithObjects() {
                     <input className="form-control" type="text" onChange={(e) => setModule({ ...module, name: e.target.value })} value={module.name}/>
                 </div>
                 <div className="col">
-                    <Link to={`${MODULE_URL}/title/${module.name}`} className="btn btn-primary">
+                    <Link to={`${MODULE_URL}/name/${module.name}`} className="btn btn-primary">
                         Update Name                    
                     </Link>
                 </div>
