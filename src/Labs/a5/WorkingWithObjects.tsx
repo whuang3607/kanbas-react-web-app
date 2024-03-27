@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function WorkingWithObjects() {
     const [assignment, setAssignment] = useState({
@@ -12,6 +13,19 @@ function WorkingWithObjects() {
     });
     const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment"
     
+    const fetchAssignment = async () => {
+        const response = await axios.get(`${ASSIGNMENT_URL}`);
+        setAssignment(response.data);
+    };
+    const updateTitle = async () => {
+    const response = await axios
+        .get(`${ASSIGNMENT_URL}/title/${assignment.title}`);
+    setAssignment(response.data);
+    };
+    useEffect(() => {
+    fetchAssignment();
+    }, []);
+
     const [module, setModule] = useState({
         id: "M1",
         name: "Welcome to Web Dev",
@@ -43,9 +57,17 @@ function WorkingWithObjects() {
                     <input className="form-control" type="text" onChange={(e) => setAssignment({ ...assignment, title: e.target.value })} value={assignment.title}/>
                 </div>
                 <div className="col">
-                    <Link to={`${ASSIGNMENT_URL}/title/${assignment.title}`} className="btn btn-primary">
-                        Update Title                    
-                    </Link>
+                    {/* <Link to={`${ASSIGNMENT_URL}/title/${assignment.title}`} className="btn btn-primary">
+                        Update Title to: {assignment.title}                    
+                    </Link> */}
+                    <button onClick={updateTitle} className="btn btn-primary">
+                        Update Title to: {assignment.title}
+                    </button>
+                </div>
+                <div className="col">
+                    <button onClick={fetchAssignment} className="btn btn-success">
+                        Fetch Assignment
+                    </button>
                 </div>
             </div>
             <br/>
