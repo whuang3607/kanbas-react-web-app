@@ -13,6 +13,8 @@ export default function WorkingWithArrays() {
         completed: false,
     });
 
+    const [errorMessage, setErrorMessage] = useState(null);
+
     const [todos, setTodos] = useState<any[]>([]);
     
     const fetchTodos = async () => {
@@ -44,6 +46,31 @@ export default function WorkingWithArrays() {
     useEffect(() => {
         fetchTodos();
     }, []);
+
+    const postTodo = async () => {
+        const response = await axios.post(API, todo);
+        setTodos([...todos, response.data]);
+    };
+
+    const deleteTodo = async (todo: any) => {
+        try {
+        const response = await axios.delete(`${API}/${todo.id}`);
+        setTodos(todos.filter((t) => t.id !== todo.id));
+        } catch (error: any) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
+    };
+    
+    const updateTodo = async () => {
+        try {
+            const response = await axios.put(`${API}/${todo.id}`, todo);
+            setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+        } catch (error: any) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
+    };
 
     return (
       <div>
@@ -82,29 +109,57 @@ export default function WorkingWithArrays() {
         <br/><br/>
 
         <h3>Updating an Item in an Array</h3>
-        <input className="form-control w-25" type="number" value={todo.id}
-        onChange={(e) => setTodo({...todo, id: parseInt(e.target.value) })}/>
+        <input className="form-control w-50" value={todo.id} readOnly />
         <br/>
         <input className="form-control w-50" type="text" value={todo.title}
         onChange={(e) => setTodo({...todo, title: e.target.value })}/>
         <br/>
+        <textarea className="form-control w-50" value={todo.description}
+        onChange={(e) => setTodo({ ...todo, description: e.target.value })} />
+        <br/>
+        <input className="form-control w-50" value={todo.due} type="date" 
+        onChange={(e) => setTodo({...todo, due: e.target.value })} />
+        <br/>
+        <label>
+            &emsp;
+            <input className="form-check-input" type="checkbox" 
+            onChange={(e) => setTodo({...todo, completed: e.target.checked })} checked={todo.completed}/>
+            &emsp;
+            Completed
+        </label>
+        <br/><br/>
+        <button className="btn btn-warning" onClick={postTodo}>
+            Post Todo 
+        </button>
+        <br/><br/>
         <button onClick={createTodo} className="btn btn-info">
             Create Todo
         </button>
         <br/><br/>
-        {/* <Link to={`${API}/${todo.id}/title/${todo.title}`} className="btn btn-success">
-            Update Title to {todo.title}
-        </Link> */}
-        <button onClick={updateTitle} className="btn btn-success">
+        {/* <button onClick={updateTitle} className="btn btn-success">
             Update Title
+        </button> */}
+        <button onClick={updateTodo} className="btn btn-success">
+            Update Todo
         </button>
+        {errorMessage && (
+            <>
+                <br/><br/>
+                <div className="alert alert-danger mb-2 mt-2">
+                    {errorMessage}
+                </div>
+            </>
+        )}
         <br/><br/>
         <ul className="list-group w-50">
             {todos.map((todo) => (
             <li key={todo.id} className="list-group-item">
                 <div className="row">
                     <div className="col-8">
+                        <input checked={todo.completed} type="checkbox" readOnly />&emsp;
                         {todo.title}
+                        <p>{todo.description}</p>
+                        <p>{todo.due}</p>
                     </div>
                     <div className="col-2">
                         <button onClick={() => fetchTodoById(todo.id)} className="btn btn-warning">
@@ -112,41 +167,17 @@ export default function WorkingWithArrays() {
                         </button>
                     </div>
                     <div className="col-2">
-                        <button onClick={() => removeTodo(todo)} className="btn btn-danger">
+                        {/* <button onClick={() => removeTodo(todo)} className="btn btn-danger">
                             Remove
+                        </button> */}
+                        <button onClick={() => deleteTodo(todo)} className="btn btn-danger">
+                            Delete
                         </button>
                     </div>
                 </div>
             </li>
             ))}
         </ul>
-        <br/><br/>
-
-
-
-        <div className="row">
-            <div className="col-3" style={{"textAlign": "center"}}>
-                <input className="form-check-input" type="checkbox" id="completed-checkbox" onChange={(e) => setTodo({ ...todo, completed: e.target.checked})}/>
-            </div>
-            <div className="col">
-                <Link to={`${API}/${todo.id}/completed/${todo.completed}`} className="btn btn-warning">
-                    Update Completed to                    
-                </Link>
-            </div>
-        </div>
-        <br/><br/>
-        
-        <div className="row">
-            <div className="col-5">
-                <input className="form-control" type="text" value={todo.description}
-                onChange={(e) => setTodo({...todo, description: e.target.value })}/>                
-            </div>
-            <div className="col">
-                <Link to={`${API}/${todo.id}/description/${todo.description}`} className="btn btn-success">
-                    Update Description to {todo.description}
-                </Link>
-            </div>
-        </div>
         <br/><br/>
       </div>
     );
